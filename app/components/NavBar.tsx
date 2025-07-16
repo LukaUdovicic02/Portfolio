@@ -6,7 +6,7 @@ type Props = {};
 const NavBar = (props: Props) => {
   return (
     <div className="flex justify-center z-1 w-full  ">
-      <div className=" w-[600px] rounded-2xl border-secondarytext border-solid border-1 px-20 py-4">
+      <div className=" w-[580px] h-[66px] rounded-2xl border-secondarytext border-solid border-1 px-22 py-4">
         <ul className="flex flex-row justify-between items-center text-2xl font-bold text-secondarytext ">
           <li className="hover:text-primarytext transition duration-300 ">
             <Link href="#">Home</Link>
