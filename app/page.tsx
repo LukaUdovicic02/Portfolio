@@ -5,6 +5,7 @@ import Projects from "./components/Projects";
 import background from "@/public/images/background.png";
 import GridPattern from "@/public/images/grid-pattern.png";
 import About from "./components/About";
+import Contact from "./components/Contact";
 
 export default function Page() {
   return (
@@ -28,6 +29,7 @@ export default function Page() {
       <Home />
       <Projects />
       <About />
+      <Contact />
 
     </div>
   );

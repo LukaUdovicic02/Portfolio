@@ -10,7 +10,7 @@ type Props = {};
 const About = (props: Props) => {
   return (
     <div className="w-[1440px] h-[1024px] p-14  flex flex-col justify-center items-center relative">
-      <div className="absolute inset-0 bg-[url(/images/backgroundHomePage.png)] bg-[position:150px_200px] -z-1 opacity-70 bg-[length:80%] bg-no-repeat"></div>
+      <div className="absolute inset-0 bg-[url(/images/backgroundHomePage.png)] bg-[position:-250px_420px] -z-1 opacity-70 bg-[length:140%_60%] bg-no-repeat"></div>
 
       <div className="flex flex-1/2 flex-col items-center justify-between">
         <p
@@ -20,7 +20,7 @@ const About = (props: Props) => {
         >
           ABOUT ME
         </p>
-        <p className="text-secondarytext text-xl align-top w-[764px] h-[246px] text-center mb-15 tracking-[0.2em]">
+        <p className="text-secondarytext text-xl align-top w-[764px] h-[246px] text-center mb-16 tracking-[0.2em]">
           Software Engineering graduate and solution-oriented developer with
           hands-on experience across different areas of the software development
           lifecycle. I'm driven by the challenge of building clean, effective
