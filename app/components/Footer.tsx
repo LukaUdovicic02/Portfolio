@@ -37,19 +37,19 @@ const Footer = (props: Props) => {
       </ul>
       <ul className="flex flex-row gap-8 ">
         <li className=" border-1 border-secondarytext rounded-4xl p-2 hover:bg-primarytext transition duration-300">
-          <Link href="#">
+          <a target="blank" href="mailto:lukaudovicic10@gmail.com">
             <Image className="w-6 h-6" src={EmailIcon} alt="icon" />
-          </Link>
+          </a>
         </li>
         <li className=" border-1 border-secondarytext rounded-4xl p-2 hover:bg-primarytext transition duration-300">
-          <Link href="#">
+          <a target="blank" href="https://www.linkedin.com/in/lukaudovicic/">
             <Image className="w-6 h-6" src={LinkedInIcon} alt="icon" />
-          </Link>
+          </a>
         </li>
         <li className=" border-1 border-secondarytext rounded-4xl p-2 hover:bg-primarytext transition duration-300 ">
-          <Link href="#">
+          <a target="blank" href="https://github.com/LukaUdovicic02">
             <Image className="w-6 h-6" src={GithubIcon} alt="icon" />
-          </Link>
+          </a>
         </li>
       </ul>
       <div className="flex gap-15">

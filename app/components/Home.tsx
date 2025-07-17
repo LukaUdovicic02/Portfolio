@@ -14,18 +14,15 @@ import GitIcon from "@/public/images/icon-git.png";
 import DockerIcon from "@/public/images/icon-docker.png";
 import NavBar from "./NavBar";
 
-
 type Props = {};
 
 const Home = (props: Props) => {
   return (
     <div className="w-[1440px] h-[1024px] p-14 ">
-    
-
       <div className="flex flex-col h-full z-10">
         <NavBar />
 
-        <div className="flex items-center justify-between flex-grow bg-[url(/images/backgroundHomePage.png)] bg-no-repeat">
+        <div className="flex items-center justify-between flex-grow bg-[url(/images/backgroundHomePage.png)]  bg-no-repeat">
           <div className="w-[674px] h-[527px] ">
             <div>
               <h1 className="text-2xl text-secondarytext mb-2 ">Hi I am</h1>
@@ -39,27 +36,34 @@ const Home = (props: Props) => {
             <div>
               <ul className="flex flex-row mt-12 gap-8 mb-8">
                 <li className=" border-1 border-secondarytext rounded-4xl p-2 hover:bg-primarytext transition duration-300">
-                  <Link href="#">
+                  <a href="mailto:lukaudovicic10@gmail.com" target="blank">
                     <Image className="w-6 h-6" src={EmailIcon} alt="icon" />
-                  </Link>
+                  </a>
                 </li>
                 <li className=" border-1 border-secondarytext rounded-4xl p-2 hover:bg-primarytext transition duration-300">
-                  <Link href="#">
+                  <a
+                    target="blank"
+                    href="https://www.linkedin.com/in/lukaudovicic/"
+                  >
                     <Image className="w-6 h-6" src={LinkedInIcon} alt="icon" />
-                  </Link>
+                  </a>
                 </li>
                 <li className=" border-1 border-secondarytext rounded-4xl p-2 hover:bg-primarytext transition duration-300 ">
-                  <Link href="#">
+                  <a target="blank" href="https://github.com/LukaUdovicic02">
                     <Image className="w-6 h-6" src={GithubIcon} alt="icon" />
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>
             <div className="flex flex-row gap-8">
-              <button className="font-bold rounded-md py-2 px-8 bg-header text-primarytext cursor-pointer hover:bg-transparent transition duration-300 hover:border-secondarytext hover:text-secondarytext hover:border-1">
+              <a
+                target="blank"
+                href="https://github.com/LukaUdovicic02"
+                className="font-bold rounded-md py-2 px-8 bg-header text-primarytext cursor-pointer hover:bg-transparent  hover:border-secondarytext hover:text-secondarytext hover:border-1"
+              >
                 GitHub
-              </button>
-              <button className="font-bold rounded-md py-2 px-12 border-1 border-secondarytext text-secondarytext cursor-pointer hover:bg-header hover:text-primarytext transition duration-300">
+              </a>
+              <button className="font-bold rounded-md py-2 px-12 border-1 border-secondarytext text-secondarytext cursor-pointer hover:bg-header hover:text-primarytext ">
                 Download CV
               </button>
             </div>

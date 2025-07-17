@@ -9,6 +9,16 @@ import TailwindIcon from "@/public/images/icon-tailwind.png";
 import NetIcon from "@/public/images/icon-net.png";
 import TsIcon from "@/public/images/icon-ts.png";
 import AzureIcon from "@/public/images/icon-azure.png";
+import JavaIcon from "@/public/images/icon-java.png";
+import GitIcon from "@/public/images/icon-git.png";
+import GitHubIcon from "@/public/images/icon-github.png";
+import UnityIcon from "@/public/images/icon-unity.png";
+import AwsIcon from "@/public/images/icon-aws.png";
+import AndroidIcon from "@/public/images/icon-android.png";
+import DbIcon from "@/public/images/icon-db.png";
+import DineEaseBG from "@/public/images/DineEaseBG.png";
+import VRCS from "@/public/images/VRCS.png";
+import SmartGym from "@/public/images/smartGym.png";
 
 type Props = {};
 
@@ -34,7 +44,13 @@ const Projects = (props: Props) => {
                      "
           >
             <div className="flex flex-2/3">
-              <div className="h-[296px] w-[358px] bg-blck rounded-xl"></div>
+              <div className="h-[296px] w-[358px] bg-blck rounded-xl flex items-center  ">
+                <Image
+                  className="ml-1"
+                  src={DineEaseBG}
+                  alt="dine ease background"
+                />
+              </div>
             </div>
 
             <div className="flex-1/3">
@@ -65,12 +81,12 @@ const Projects = (props: Props) => {
                   </li>
                 </ul>
 
-                <Link href="#">
+                <a target="blank" href="https://github.com/LukaUdovicic02/BPR2">
                   <div className="flex-1/4 flex flex-row items-center">
                     <p className="text-primarytext text-[16px] mr-2">GitHub</p>
                     <Image src={Arrow} alt="arrow" width={12} height={12} />
                   </div>
-                </Link>
+                </a>
               </div>
             </div>
           </li>
@@ -81,43 +97,45 @@ const Projects = (props: Props) => {
                      hover:translate-z-1 hover:rotate-x-1"
           >
             <div className="flex flex-2/3">
-              <div className="h-[296px] w-[358px] bg-blck rounded-xl"></div>
+              <div className="h-[296px] w-[358px] bg-blck rounded-xl">
+                <Image
+                  className="ml-3 mt-2"
+                  src={VRCS}
+                  alt="vr cs background"
+                />
+              </div>
             </div>
 
             <div className="flex-1/3">
               <p className="font-bold text-primarytext text-[16px]">
-                DineEase - Bachelor Project
+                CS 1.6 VR - VR School Project
               </p>
-              <p className="text-[16px] text-secondarytext">
-                Simplify restaurant reservations with ease. Designed to help
-                both managers and customers streamline the booking process for a
-                smoother dining experience.
+              <p className="text-[16px] text-secondarytext mb-11">
+                CS 1.6 in VR with Dust2, an AK-47, and core movement. Features
+                original sounds, full map access, and a detachable magazine.
               </p>
               <div className="flex mt-5">
                 <ul className="flex-3/4 flex flex-row justify-start gap-6">
                   <li className="flex flex-col justify-center items-center">
+                    <Image className="w-7 h-7" src={UnityIcon} alt="icon" />
+                  </li>
+                  <li className="flex flex-col justify-center items-center">
                     <Image className="w-7 h-7" src={NetIcon} alt="icon" />
                   </li>
                   <li className="flex flex-col justify-center items-center">
-                    <Image className="w-7 h-7" src={TailwindIcon} alt="icon" />
-                  </li>
-                  <li className="flex flex-col justify-center items-center">
-                    <Image className="w-7 h-7" src={TsIcon} alt="icon" />
-                  </li>
-                  <li className="flex flex-col justify-center items-center">
-                    <Image className="w-7 h-7" src={ReactIcon} alt="icon" />
-                  </li>
-                  <li className="flex flex-col justify-center items-center">
-                    <Image className="w-7 h-7" src={AzureIcon} alt="icon" />
+                    <Image className="w-7 h-7" src={GitHubIcon} alt="icon" />
                   </li>
                 </ul>
 
-                <Link href="#">
+                <a
+                  target="blank"
+                  href="https://github.com/XRD-Group-11/VR-CS-1.6"
+                >
                   <div className="flex-1/4 flex flex-row items-center">
                     <p className="text-primarytext text-[16px] mr-2">GitHub</p>
                     <Image src={Arrow} alt="arrow" width={12} height={12} />
                   </div>
-                </Link>
+                </a>
               </div>
             </div>
           </li>
@@ -128,43 +146,52 @@ const Projects = (props: Props) => {
                      hover:translate-z-1 hover:rotate-x-1 "
           >
             <div className="flex flex-2/3">
-              <div className="h-[296px] w-[358px] bg-blck rounded-xl"></div>
+              <div className="h-[296px] w-[358px] bg-blck rounded-xl">
+                <Image
+                  className="ml-3 mt-2"
+                  src={SmartGym}
+                  alt="smart gym background"
+                />
+              </div>
             </div>
 
             <div className="flex-1/3">
               <p className="font-bold text-primarytext text-[16px]">
-                DineEase - Bachelor Project
+                Smart Gym - IOT School Project
               </p>
-              <p className="text-[16px] text-secondarytext">
-                Simplify restaurant reservations with ease. Designed to help
-                both managers and customers streamline the booking process for a
-                smoother dining experience.
+              <p className="text-[16px] text-secondarytext mb-11">
+                Smart gym system that monitors air quality and adjusts
+                temperature. Enhances workouts using CO2, humidity, and
+                temperature sensors.
               </p>
               <div className="flex mt-5">
                 <ul className="flex-3/4 flex flex-row justify-start gap-6">
                   <li className="flex flex-col justify-center items-center">
-                    <Image className="w-7 h-7" src={NetIcon} alt="icon" />
+                    <Image className="w-7 h-7" src={JavaIcon} alt="icon" />
                   </li>
                   <li className="flex flex-col justify-center items-center">
-                    <Image className="w-7 h-7" src={TailwindIcon} alt="icon" />
+                    <Image className="w-7 h-7" src={AwsIcon} alt="icon" />
                   </li>
                   <li className="flex flex-col justify-center items-center">
-                    <Image className="w-7 h-7" src={TsIcon} alt="icon" />
+                    <Image className="w-7 h-7" src={GitHubIcon} alt="icon" />
                   </li>
                   <li className="flex flex-col justify-center items-center">
-                    <Image className="w-7 h-7" src={ReactIcon} alt="icon" />
+                    <Image className="w-7 h-7" src={AndroidIcon} alt="icon" />
                   </li>
                   <li className="flex flex-col justify-center items-center">
-                    <Image className="w-7 h-7" src={AzureIcon} alt="icon" />
+                    <Image className="w-7 h-7" src={DbIcon} alt="icon" />
                   </li>
                 </ul>
 
-                <Link href="#">
+                <a
+                  target="blank"
+                  href="https://github.com/IanaPostolachi/SEP4-v2"
+                >
                   <div className="flex-1/4 flex flex-row items-center">
                     <p className="text-primarytext text-[16px] mr-2">GitHub</p>
                     <Image src={Arrow} alt="arrow" width={12} height={12} />
                   </div>
-                </Link>
+                </a>
               </div>
             </div>
           </li>
