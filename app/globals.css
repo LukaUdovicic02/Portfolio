@@ -1,17 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  
   --color-header: #9c4500;
   --color-primarytext: #d9d9d9;
   --color-secondarytext: #959595;
-  --color-blck:#121212;
+  --color-blck: #121212;
 
   --breakpoint-xs: 30rem;
-
-  
-
 }
+
+
 
 /*
 :root {

@@ -9,10 +9,13 @@ type Props = {};
 
 const About = (props: Props) => {
   return (
-    <div className="w-[1440px] h-[1024px] p-14  flex flex-col justify-center items-center relative">
+    <div
+      id="about"
+      className="w-[1440px] h-screen   p-14  flex flex-col justify-center items-center relative"
+    >
       <div className="absolute inset-0 bg-[url(/images/backgroundHomePage.png)] bg-[position:-250px_420px] -z-1 opacity-70 bg-[length:140%_60%] bg-no-repeat"></div>
 
-      <div className="flex flex-1/2 flex-col items-center justify-between">
+      <div className="flex flex-1/2 flex-col items-center justify-start gap-15">
         <p
           className=" uppercase text-3xl font-bold tracking-[0.45em] 
       justify-center items-center text-transparent bg-clip-text bg-linear-to-r

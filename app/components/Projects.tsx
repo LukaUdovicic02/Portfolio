@@ -24,7 +24,7 @@ type Props = {};
 
 const Projects = (props: Props) => {
   return (
-    <div className=" relative w-[1440px] h-[1024px] p-14 flex justify-center items-center flex-col">
+    <div id="projects" className=" relative w-[1440px] h-screen p-14 flex justify-center items-center flex-col">
       <div className="absolute inset-0 bg-[url(/images/backgroundHomePage.png)] bg-[position:350px_-40px] -z-1 opacity-50 bg-no-repeat"></div>
       <p
         className=" flex flex-1/4 uppercase text-3xl font-bold tracking-[0.45em] 

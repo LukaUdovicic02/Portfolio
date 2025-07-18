@@ -18,7 +18,7 @@ type Props = {};
 
 const Home = (props: Props) => {
   return (
-    <div className="w-[1440px] h-[1024px] p-14 ">
+    <div id="home" className="w-[1440px] h-screen  p-14 ">
       <div className="flex flex-col h-full z-10">
         <NavBar />
 
@@ -63,9 +63,12 @@ const Home = (props: Props) => {
               >
                 GitHub
               </a>
-              <button className="font-bold rounded-md py-2 px-12 border-1 border-secondarytext text-secondarytext cursor-pointer hover:bg-header hover:text-primarytext ">
+              <a
+                href="/api"
+                className="font-bold rounded-md py-2 px-12 border-1 border-secondarytext text-secondarytext cursor-pointer hover:bg-header hover:text-primarytext "
+              >
                 Download CV
-              </button>
+              </a>
             </div>
           </div>
 

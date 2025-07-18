@@ -4,7 +4,10 @@ type Props = {};
 
 function Contact({}: Props) {
   return (
-    <div className="w-[1440px] h-[1024px] p-14 flex flex-col gap-15  items-center relative">
+    <div
+      id="contact"
+      className="w-[1440px] h-screen  p-14 flex flex-col gap-15  items-center relative"
+    >
       <div
         className="bg-[url(/images/backgroundHomePage.png)] bg-no-repeat
        bg-[position:350px] -z-1 opacity-100 absolute inset-0"

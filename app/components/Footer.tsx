@@ -23,16 +23,16 @@ const Footer = (props: Props) => {
       </p>
       <ul className="flex flex-row justify-around w-[444px]">
         <li className="hover:text-primarytext text-xl text-secondarytext transition duration-300 ">
-          <Link href="#">Home</Link>
+          <a href="#home">Home</a>
         </li>
         <li className="hover:text-primarytext text-xl text-secondarytext transition duration-300 ">
-          <Link href="#">Projects</Link>
+          <a href="#projects">Projects</a>
         </li>
         <li className="hover:text-primarytext text-xl text-secondarytext transition duration-300">
-          <Link href="#">About</Link>
+          <a href="#about">About</a>
         </li>
         <li className="hover:text-primarytext text-xl text-secondarytext transition duration-300">
-          <Link href="#">Contact</Link>
+          <a href="#contact">Contact</a>
         </li>
       </ul>
       <ul className="flex flex-row gap-8 ">
