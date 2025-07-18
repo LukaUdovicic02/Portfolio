@@ -60,7 +60,7 @@ function Contact({}: Props) {
 
         <button
           className="bg-header left-1/2 -translate-x-1/2 relative text-primarytext
-         w-[129px] h-[39px] uppercase rounded-2xl font-bold tracking-[0.2em]
+         w-[129px] h-[39px] uppercase rounded-2xl font-bold tracking-[0.2em] cursor-pointer
          hover:border-1 hover:border-secondarytext hover:text-secondarytext hover:bg-transparent
          "
         >

@@ -22,7 +22,7 @@ const Home = (props: Props) => {
       <div className="flex flex-col h-full z-10">
         <NavBar />
 
-        <div className="flex items-center justify-between flex-grow bg-[url(/images/backgroundHomePage.png)]  bg-no-repeat">
+        <div className="flex items-center justify-between flex-grow bg-[url(/images/backgroundHomePage.png)] bg-[position:-50px]  bg-no-repeat">
           <div className="w-[674px] h-[527px] ">
             <div>
               <h1 className="text-2xl text-secondarytext mb-2 ">Hi I am</h1>
@@ -30,14 +30,17 @@ const Home = (props: Props) => {
                 Luka Udovicic
               </h1>
               <h1 className="text-7xl text-header font-bold w-[700px]">
-                Full-Stack Software Engineer
+                Full-Stack <span className="blinking-letter">Software</span>
+              </h1>
+              <h1 className="text-7xl text-header font-bold w-[700px]">
+                Engineer
               </h1>
             </div>
             <div>
               <ul className="flex flex-row mt-12 gap-8 mb-8">
-                <li className=" border-1 border-secondarytext rounded-4xl p-2 hover:bg-primarytext transition duration-300">
+                <li className=" border-1 border-secondarytext rounded-4xl p-2 hover:bg-secondarytext transition duration-300">
                   <a href="mailto:lukaudovicic10@gmail.com" target="blank">
-                    <Image className="w-6 h-6" src={EmailIcon} alt="icon" />
+                    <Image className="w-6 h-6 " src={EmailIcon} alt="icon" />
                   </a>
                 </li>
                 <li className=" border-1 border-secondarytext rounded-4xl p-2 hover:bg-primarytext transition duration-300">
@@ -72,11 +75,14 @@ const Home = (props: Props) => {
             </div>
           </div>
 
-          <div className="bg-[url(/images/backgroundHomePage.png)] bg-no-repeat bg-[length:60%_60%] bg-[position:100px] relative">
+          <div className="bg-[url(/images/backgroundHomePage.png)] bg-no-repeat bg-[length:60%_60%] bg-[position:100px] relative ">
+            <div className="absolute z-2 bottom-0 w-[543px] h-[620px] bg-gradient-to-bl from-blck/10 to-blck"></div>
+            <div className="absolute bottom-0 w-[543px] z-2 h-[620px] bg-gradient-to-t from-blck to-blck/0"></div>
+
             <Image
               src={slika}
               alt="profile picture"
-              className="object-contain"
+              className="object-contain z-1 relative"
               width={543}
               height={592}
             />

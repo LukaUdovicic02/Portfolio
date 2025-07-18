@@ -9,7 +9,19 @@
   --breakpoint-xs: 30rem;
 }
 
+@keyframes soft-blink {
+  50% {
+    opacity: 0.1;
+  }
+  
+  100% {
+    opacity: 1;
+  }
+}
 
+.blinking-letter {
+  animation: soft-blink 4s ease-out infinite;
+}
 
 /*
 :root {

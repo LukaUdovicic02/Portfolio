@@ -11,7 +11,7 @@ const About = (props: Props) => {
   return (
     <div
       id="about"
-      className="w-[1440px] h-screen   p-14  flex flex-col justify-center items-center relative"
+      className="w-[1440px] h-screen  p-14  flex flex-col justify-center items-center relative"
     >
       <div className="absolute inset-0 bg-[url(/images/backgroundHomePage.png)] bg-[position:-250px_420px] -z-1 opacity-70 bg-[length:140%_60%] bg-no-repeat"></div>
 
