@@ -19,7 +19,7 @@ const About = (props: Props) => {
         <p
           className=" uppercase text-3xl font-bold tracking-[0.45em] 
       justify-center items-center text-transparent bg-clip-text bg-linear-to-r
-       from-orange-900  via-yellow-600 to-orange-900 mt-10"
+       from-orange-900  via-yellow-600 to-orange-900 mt-10 animated-gradient"
         >
           ABOUT ME
         </p>
@@ -53,8 +53,8 @@ const About = (props: Props) => {
                   and easy to maintain.
                 </p>
               </div>
+              <span className="absolute bottom-10 left-1/2 h-0.5 w-1/5 bg-secondarytext transition-all duration-500 origin-center transform -translate-x-1/2 group-hover:w-full"></span>
             </div>
-            <span className="absolute bottom-0 left-1/2 h-0.5 w-1/5 bg-secondarytext transition-all duration-500 origin-center transform -translate-x-1/2 group-hover:w-full"></span>
           </li>
           <li className="group text-secondarytext hover:translate-2 hover:duration-1000 relative">
             <div className="flex flex-row">
@@ -73,7 +73,7 @@ const About = (props: Props) => {
                 </p>
               </div>
             </div>
-            <span className="absolute bottom-0 left-1/2 h-0.5 w-1/5 bg-secondarytext transition-all duration-500 origin-center transform -translate-x-1/2 group-hover:w-full"></span>
+            <span className="absolute bottom-10 left-1/2 h-0.5 w-1/5 bg-secondarytext transition-all duration-500 origin-center transform -translate-x-1/2 group-hover:w-full"></span>
           </li>
           <li className="group text-secondarytext hover:translate-2 hover:duration-1000 relative">
             <div className="flex flex-row">
@@ -93,7 +93,7 @@ const About = (props: Props) => {
                 </p>
               </div>
             </div>
-            <span className="absolute bottom-0 left-1/2 h-0.5 w-1/5 bg-secondarytext transition-all duration-500 origin-center transform -translate-x-1/2 group-hover:w-full"></span>
+            <span className="absolute bottom-10 left-1/2 h-0.5 w-1/5 bg-secondarytext transition-all duration-500 origin-center transform -translate-x-1/2 group-hover:w-full"></span>
           </li>
           <li className="group text-secondarytext hover:translate-2 hover:duration-1000 relative">
             <div className="flex flex-row">
@@ -112,7 +112,7 @@ const About = (props: Props) => {
                 </p>
               </div>
             </div>
-            <span className="absolute bottom-0 left-1/2 h-0.5 w-1/5 bg-secondarytext transition-all duration-500 origin-center transform -translate-x-1/2 group-hover:w-full"></span>
+            <span className="absolute bottom-10 left-1/2 h-0.5 w-1/5 bg-secondarytext transition-all duration-500 origin-center transform -translate-x-1/2 group-hover:w-full"></span>
           </li>
         </ul>
       </div>

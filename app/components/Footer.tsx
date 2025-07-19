@@ -17,7 +17,8 @@ const Footer = (props: Props) => {
       ></div>
       <p
         className=" text-3xl font-bold  
-      justify-center items-center text-header mt-5"
+      justify-center items-center  mt-5 bg-linear-to-r text-transparent bg-clip-text
+       from-orange-900  via-yellow-600 to-orange-900  animated-gradient"
       >
         Luka Udovicic
       </p>

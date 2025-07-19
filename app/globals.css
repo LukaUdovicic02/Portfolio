@@ -13,14 +13,59 @@
   50% {
     opacity: 0.1;
   }
-  
+
   100% {
     opacity: 1;
   }
 }
-
 .blinking-letter {
-  animation: soft-blink 4s ease-out infinite;
+  animation: soft-blink 3s ease-out infinite;
+}
+
+.animated-gradient {
+  color: linear-gradient(from left, to right, #7c2d12, #facc15, #7c2d12);
+  background-size: 200% auto;
+  animation: gradient-move 5s ease-in-out infinite;
+}
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(3);
+  }
+  40% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-3);
+  }
+
+  70% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(3);
+  }
+}
+
+.shake-on-hover:hover {
+  animation: shake ease-in-out 0.3s;
 }
 
 /*

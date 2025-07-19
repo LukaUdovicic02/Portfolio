@@ -15,7 +15,7 @@ function Contact({}: Props) {
       <p
         className=" uppercase text-3xl font-bold tracking-[0.45em] 
       justify-center items-center text-transparent bg-clip-text bg-linear-to-r
-       from-orange-900  via-yellow-600 to-orange-900 mt-10"
+       from-orange-900  via-yellow-600 to-orange-900 mt-10 animated-gradient"
       >
         contact
       </p>

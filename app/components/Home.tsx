@@ -18,7 +18,7 @@ type Props = {};
 
 const Home = (props: Props) => {
   return (
-    <div id="home" className="w-[1440px] h-screen  p-14 ">
+    <div id="home" className="w-[1440px] h-screen p-14 ">
       <div className="flex flex-col h-full z-10">
         <NavBar />
 
@@ -30,7 +30,13 @@ const Home = (props: Props) => {
                 Luka Udovicic
               </h1>
               <h1 className="text-7xl text-header font-bold w-[700px]">
-                Full-Stack <span className="blinking-letter">Software</span>
+                Full-Stack{" "}
+                <span
+                  className="blinking-letter bg-linear-to-r text-transparent bg-clip-text
+                           from-orange-900  via-yellow-600 to-orange-900"
+                >
+                  Software
+                </span>
               </h1>
               <h1 className="text-7xl text-header font-bold w-[700px]">
                 Engineer
@@ -62,13 +68,13 @@ const Home = (props: Props) => {
               <a
                 target="blank"
                 href="https://github.com/LukaUdovicic02"
-                className="font-bold rounded-md py-2 px-8 bg-header text-primarytext cursor-pointer hover:bg-transparent  hover:border-secondarytext hover:text-secondarytext hover:border-1"
+                className="font-bold rounded-md py-2 px-8 bg-header border-1 border-header transition ease-in-out duration-500 text-primarytext cursor-pointer hover:bg-transparent  hover:border-secondarytext hover:text-secondarytext hover:border-1"
               >
                 GitHub
               </a>
               <a
                 href="/api"
-                className="font-bold rounded-md py-2 px-12 border-1 border-secondarytext text-secondarytext cursor-pointer hover:bg-header hover:text-primarytext "
+                className="transition ease-in-out duration-500 hover:border-header font-bold rounded-md py-2 px-12 border-1 border-secondarytext text-secondarytext cursor-pointer hover:bg-header hover:text-primarytext "
               >
                 Download CV
               </a>
@@ -76,8 +82,8 @@ const Home = (props: Props) => {
           </div>
 
           <div className="bg-[url(/images/backgroundHomePage.png)] bg-no-repeat bg-[length:60%_60%] bg-[position:100px] relative ">
-            <div className="absolute z-2 bottom-0 w-[543px] h-[620px] bg-gradient-to-bl from-blck/10 to-blck"></div>
-            <div className="absolute bottom-0 w-[543px] z-2 h-[620px] bg-gradient-to-t from-blck to-blck/0"></div>
+            <div className="absolute z-2 bottom-0 w-[543px] h-[592px] bg-gradient-to-bl from-blck/10 to-blck"></div>
+            <div className="absolute bottom-0 w-[544px] z-2 h-[593px] bg-gradient-to-t from-blck to-blck/0"></div>
 
             <Image
               src={slika}
@@ -91,35 +97,35 @@ const Home = (props: Props) => {
 
         <div className="bg-[#212121] flex justify-center w-[1337px]  h-[126px] rounded-md mx-auto">
           <ul className="flex flex-row justify-center items-center gap-24">
-            <li className="flex flex-col justify-center items-center">
+            <li className="flex flex-col justify-center items-center shake-on-hover">
               <Image className="w-9 h-9" src={NetIcon} alt="icon" />
               <p className="text-primarytext font-bold">.NET C#</p>
             </li>
-            <li className="flex flex-col justify-center items-center">
+            <li className="flex flex-col justify-center items-center shake-on-hover">
               <Image className="w-9 h-9" src={ReactIcon} alt="icon" />
               <p className="text-primarytext font-bold">REACT.JS</p>
             </li>
-            <li className="flex flex-col justify-center items-center">
+            <li className="flex flex-col justify-center items-center shake-on-hover">
               <Image className="w-9 h-9" src={TsIcon} alt="icon" />
               <p className="text-primarytext font-bold">TYPESCRIPT</p>
             </li>
-            <li className="flex flex-col justify-center items-center">
+            <li className="flex flex-col justify-center items-center shake-on-hover">
               <Image className="w-9 h-9" src={JavaIcon} alt="icon" />
               <p className="text-primarytext font-bold">JAVA</p>
             </li>
-            <li className="flex flex-col justify-center items-center">
+            <li className="flex flex-col justify-center items-center shake-on-hover">
               <Image className="w-9 h-9" src={GitIcon} alt="icon" />
               <p className="text-primarytext font-bold">GIT</p>
             </li>
-            <li className="flex flex-col justify-center items-center">
+            <li className="flex flex-col justify-center items-center shake-on-hover">
               <Image className="w-9 h-9" src={DockerIcon} alt="icon" />
               <p className="text-primarytext font-bold">DOCKER</p>
             </li>
-            <li className="flex flex-col justify-center items-center">
+            <li className="flex flex-col justify-center items-center shake-on-hover">
               <Image className="w-9 h-9" src={AzureIcon} alt="icon" />
               <p className="text-primarytext font-bold">AZURE</p>
             </li>
-            <li className="flex flex-col justify-center items-center">
+            <li className="flex flex-col justify-center items-center shake-on-hover">
               <Image className="w-9 h-9" src={TailwindIcon} alt="icon" />
               <p className="text-primarytext font-bold">TAILWINCSS</p>
             </li>
