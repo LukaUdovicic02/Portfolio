@@ -82,8 +82,8 @@ const Home = (props: Props) => {
           </div>
 
           <div className="bg-[url(/images/backgroundHomePage.png)] bg-no-repeat bg-[length:60%_60%] bg-[position:100px] relative ">
-            <div className="absolute z-2 bottom-0 w-[543px] h-[592px] bg-gradient-to-bl from-blck/10 to-blck"></div>
-            <div className="absolute bottom-0 w-[544px] z-2 h-[593px] bg-gradient-to-t from-blck to-blck/0"></div>
+            <div className="absolute z-2 bottom-0 w-[543px] h-[592px] bg-gradient-to-bl from-blck/0 to-blck"></div>
+            <div className="absolute bottom-0 w-[544px] z-2 h-[593px] bg-gradient-to-t from-blck/30 to-blck/0"></div>
 
             <Image
               src={slika}

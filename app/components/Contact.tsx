@@ -1,8 +1,42 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
+import { POST } from "../api/send/route";
 
 type Props = {};
 
 function Contact({}: Props) {
+  const [name, setName] = useState<string>("");
+  const [phonenumber, setPhone] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [message, setMsg] = useState<string>("");
+
+  const onSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    try {
+      const res = await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email, phonenumber, message }),
+      });
+
+      if (res.ok) {
+        console.log("Email sent successfully!");
+        setName("");
+        setEmail("");
+        setPhone("");
+        setMsg("");
+      } else {
+        console.error("Failed to send email.");
+      }
+    } catch (err) {
+      console.error("Error:", err);
+    }
+    console.log(name);
+  };
   return (
     <div
       id="contact"
@@ -24,10 +58,13 @@ function Contact({}: Props) {
         the platforms. I'll get back to you as soon as possible!
       </p>
 
-      <form className="flex flex-col w-[600px] relative ">
+      <form onSubmit={onSubmit} className="flex flex-col w-[600px] relative ">
         <div className="relative mb-15">
           <input
             type="text"
+            value={name}
+            required
+            onChange={(e) => setName(e.target.value)}
             placeholder="ENTER YOUR NAME*"
             className="pb-6 px-4 bg-transparent text-lg w-full text-primarytext placeholder-secondarytext focus:outline-none"
           />
@@ -36,6 +73,9 @@ function Contact({}: Props) {
         <div className="relative mb-15">
           <input
             type="email"
+            required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             placeholder="ENTER YOUR EMAIL*"
             className="pb-6 px-4 bg-transparent text-lg w-full text-primarytext placeholder-secondarytext focus:outline-none"
           />
@@ -44,6 +84,8 @@ function Contact({}: Props) {
         <div className="relative mb-15">
           <input
             type="text"
+            value={phonenumber}
+            onChange={(e) => setPhone(e.target.value)}
             placeholder="PHONE NUMBER"
             className="pb-6 px-4 bg-transparent text-lg w-full text-primarytext placeholder-secondarytext focus:outline-none"
           />
@@ -52,20 +94,23 @@ function Contact({}: Props) {
         <div className="relative mb-15">
           <textarea
             placeholder="ENTER YOUR MESSAGE*"
+            required
+            value={message}
+            onChange={(e) => setMsg(e.target.value)}
             className="w-full px-4 bg-transparent text-primarytext placeholder-secondarytext text-lg resize-none pb-2 focus:outline-none"
             rows={4}
           />
           <span className="bg-secondarytext absolute bottom-0 h-1 w-full left-0"></span>
         </div>
 
-        <button
+        <input
+          type="submit"
           className="bg-header left-1/2 -translate-x-1/2 relative text-primarytext
          w-[129px] h-[39px] uppercase rounded-2xl font-bold tracking-[0.2em] cursor-pointer
          hover:border-1 hover:border-secondarytext hover:text-secondarytext hover:bg-transparent
          "
-        >
-          submit
-        </button>
+          value="submit"
+        />
       </form>
     </div>
   );

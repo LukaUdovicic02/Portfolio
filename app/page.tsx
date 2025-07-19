@@ -8,11 +8,6 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
-// TODO: dodaj animaciju na skills
-// TODO: sliku popravi jebiga shader
-
-
-
 
 
 export default function Page() {
