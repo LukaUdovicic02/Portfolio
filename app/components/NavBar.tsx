@@ -7,7 +7,7 @@ const NavBar = (props: Props) => {
   return (
     <div className="flex justify-center z-1 h-[90px]">
       <ul
-        className=" shadow-[0_4px_20px_#9C4500] w-[580px] h-[66px] transition-all duration-300
+        className="  shadow-[0_4px_20px_#9C4500] w-[580px] h-[66px] transition-all duration-300
          hover:w-[700px] hover:h-[90px] hover:border-1 hover:px-32
          rounded-2xl border-solid
          border-1 px-22 py-4 flex flex-row justify-between items-center 

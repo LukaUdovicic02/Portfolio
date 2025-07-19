@@ -73,7 +73,7 @@ const Home = (props: Props) => {
                 GitHub
               </a>
               <a
-                href="/api"
+                href="/api/blob"
                 className="transition ease-in-out duration-500 hover:border-header font-bold rounded-md py-2 px-12 border-1 border-secondarytext text-secondarytext cursor-pointer hover:bg-header hover:text-primarytext "
               >
                 Download CV
