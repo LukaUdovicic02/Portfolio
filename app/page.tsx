@@ -8,11 +8,9 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
-
-
 export default function Page() {
   return (
-    <div className="relative  w-full min-h-screen overflow-x-hidden">
+    <div className="relative sm:w-full min-h-screen overflow-x-hidden">
       <Image
         src={background}
         alt="background"

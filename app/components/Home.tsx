@@ -18,18 +18,27 @@ type Props = {};
 
 const Home = (props: Props) => {
   return (
-    <div id="home" className="w-[1440px] h-screen p-14 ">
-      <div className="flex flex-col h-full z-10">
+    <div id="home" className="sm:w-[1440px] xs:w-full h-screen xs:p-8 sm:p-14 ">
+      <div className="flex flex-col h-full z-10 relative">
         <NavBar />
 
-        <div className="flex items-center justify-between flex-grow bg-[url(/images/backgroundHomePage.png)] bg-[position:-50px]  bg-no-repeat">
-          <div className="w-[674px] h-[527px] ">
-            <div>
-              <h1 className="text-2xl text-secondarytext mb-2 ">Hi I am</h1>
+        <div
+          className="
+          bg-no-repeat bg-[url(/images/backgroundHomePage.png)] flex flex-grow 
+          xs:bg-[length:110%_40%] xs:bg-[position:-10px_-30px]
+          xs:juftify-center xs:flex-col sm:flex-row
+          sm:items-center sm:justify-between 
+          sm:bg-[position:-50px] "
+        >
+          <div className="sm:w-[674px] sm:h-[527px] xs:flex xs:flex-col xs:items-center">
+            <div className="xs:flex xs:flex-col xs:items-center sm:block">
+              <h1 className="text-2xl  text-secondarytext mb-2">Hi I am</h1>
               <h1 className="text-3xl text-secondarytext mb-8">
                 Luka Udovicic
               </h1>
-              <h1 className="text-7xl text-header font-bold w-[700px]">
+            </div>
+            <div>
+              <h1 className="sm:text-7xl xs:text-3xl  text-header font-bold xs:w-full sm:w-[700px]">
                 Full-Stack{" "}
                 <span
                   className="blinking-letter bg-linear-to-r text-transparent bg-clip-text
@@ -38,18 +47,18 @@ const Home = (props: Props) => {
                   Software
                 </span>
               </h1>
-              <h1 className="text-7xl text-header font-bold w-[700px]">
+              <h1 className="sm:text-7xl xs:text-3xl text-header font-bold xs:w-full sm:w-[700px]">
                 Engineer
               </h1>
             </div>
             <div>
-              <ul className="flex flex-row mt-12 gap-8 mb-8">
-                <li className=" border-1 border-secondarytext rounded-4xl p-2 hover:bg-secondarytext transition duration-300">
+              <ul className="sm:flex sm:flex-row sm:mt-12 xs:mt-14 gap-8 mb-8 xs:items-center xs:flex xs:justify-center xs:relative ">
+                <li className=" border-1 border-secondarytext  rounded-4xl p-2 hover:bg-secondarytext transition duration-300">
                   <a href="mailto:lukaudovicic10@gmail.com" target="blank">
                     <Image className="w-6 h-6 " src={EmailIcon} alt="icon" />
                   </a>
                 </li>
-                <li className=" border-1 border-secondarytext rounded-4xl p-2 hover:bg-primarytext transition duration-300">
+                <li className="border-1 border-secondarytext rounded-4xl p-2 hover:bg-primarytext transition duration-300">
                   <a
                     target="blank"
                     href="https://www.linkedin.com/in/lukaudovicic/"
@@ -68,34 +77,32 @@ const Home = (props: Props) => {
               <a
                 target="blank"
                 href="https://github.com/LukaUdovicic02"
-                className="font-bold rounded-md py-2 px-8 bg-header border-1 border-header transition ease-in-out duration-500 text-primarytext cursor-pointer hover:bg-transparent  hover:border-secondarytext hover:text-secondarytext hover:border-1"
+                className="font-bold rounded-md sm:py-2 sm:px-8 xs:py-2 xs:px-5 bg-header border-1 border-header transition ease-in-out duration-500 text-primarytext cursor-pointer hover:bg-transparent  hover:border-secondarytext hover:text-secondarytext hover:border-1"
               >
                 GitHub
               </a>
               <a
                 href="/api/blob"
-                className="transition ease-in-out duration-500 hover:border-header font-bold rounded-md py-2 px-12 border-1 border-secondarytext text-secondarytext cursor-pointer hover:bg-header hover:text-primarytext "
+                className="transition ease-in-out duration-500 hover:border-header font-bold rounded-md py-2 xs:px-10 sm:px-12 border-1 border-secondarytext text-secondarytext cursor-pointer hover:bg-header hover:text-primarytext "
               >
                 Download CV
               </a>
             </div>
           </div>
 
-          <div className="bg-[url(/images/backgroundHomePage.png)] bg-no-repeat bg-[length:60%_60%] bg-[position:100px] relative ">
-            <div className="absolute z-2 bottom-0 w-[543px] h-[592px] bg-gradient-to-bl from-blck/0 to-blck"></div>
-            <div className="absolute bottom-0 w-[544px] z-2 h-[593px] bg-gradient-to-t from-blck/30 to-blck/0"></div>
+          <div className="bg-[url(/images/backgroundHomePage.png)] bg-no-repeat bg-[length:60%_60%] bg-[position:100px] relative">
+            <div className="absolute z-2 bottom-0 xs:w-full xs:h-full sm:w-full sm:h-full bg-gradient-to-bl from-blck/0 to-blck"></div>
+            <div className="absolute bottom-0 sm:w-[544px] xs:w-full xs:h-full z-2 sm:h-[593px] bg-gradient-to-t from-blck/30 to-blck/0"></div>
 
             <Image
               src={slika}
               alt="profile picture"
-              className="object-contain z-1 relative"
-              width={543}
-              height={592}
+              className="object-contain z-1 aboslute sm:w-[543px] sm:h-[592px] xs:w-full xs:h-full "
             />
           </div>
         </div>
 
-        <div className="bg-[#212121] flex justify-center w-[1337px]  h-[126px] rounded-md mx-auto">
+        <div className="xs:hidden sm:bg-[#212121] sm:flex sm:justify-center sm:w-[1337px] sm:h-[126px] sm:rounded-md sm:mx-auto">
           <ul className="flex flex-row justify-center items-center gap-24">
             <li className="flex flex-col justify-center items-center shake-on-hover">
               <Image className="w-9 h-9" src={NetIcon} alt="icon" />

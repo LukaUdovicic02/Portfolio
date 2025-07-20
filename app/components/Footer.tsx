@@ -4,6 +4,7 @@ import EmailIcon from "@/public/images/icon-email.png";
 import LinkedInIcon from "@/public/images/icon-linkedin.png";
 import GithubIcon from "@/public/images/icon-github.png";
 import PhoneIcon from "@/public/images/icon-phone.png";
+
 import Image from "next/image";
 
 type Props = {};

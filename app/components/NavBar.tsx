@@ -1,17 +1,22 @@
 import Link from "next/link";
 import React from "react";
+import navbarIcon from "@/public/images/navbarIcon.png";
 
 type Props = {};
 
 const NavBar = (props: Props) => {
   return (
-    <div className="flex justify-center z-1 h-[90px]">
+    <div className="flex sm:justify-center z-1 sm:h-[90px] xs:w-[384px] xs:h-[60px] relative ">
+      <div className="bg-[url(/images/navbarIcon.png)] w-30 h-30 bg-no-repeat relative md:hidden"></div>
       <ul
-        className="  shadow-[0_4px_20px_#9C4500] w-[580px] h-[66px] transition-all duration-300
-         hover:w-[700px] hover:h-[90px] hover:border-1 hover:px-32
-         rounded-2xl border-solid
-         border-1 px-22 py-4 flex flex-row justify-between items-center 
-        text-2xl font-bold text-secondarytext "
+        className="
+          xs:hidden xs:w-[300px] 
+
+          sm:shadow-[0_4px_20px_#9C4500] sm:w-[580px] sm:h-[66px] sm:transition-all  
+          sm:hover:w-[700px] sm:hover:h-[90px] m:hover:border-1 sm:hover:px-32 
+          sm:rounded-2xl sm:border-solid sm:duration-300 sm:items-center
+          sm:border-1 sm:px-22 sm:py-4 sm:flex sm:flex-row sm:justify-between  
+          sm:text-2xl sm:font-bold sm:text-secondarytext"
       >
         <li className="hover:text-primarytext transition duration-300 ">
           <Link href="#home">Home</Link>

@@ -6,7 +6,7 @@
   --color-secondarytext: #959595;
   --color-blck: #121212;
 
-  --breakpoint-xs: 30rem;
+  --breakpoint-xs: 384px;
 }
 
 @keyframes soft-blink {
@@ -29,7 +29,7 @@
 }
 
 .blinking-letter {
-  animation: soft-blink s ease-in-out infinite;
+  animation: soft-blink 3s ease-in-out infinite;
 }
 
 .animated-gradient {
