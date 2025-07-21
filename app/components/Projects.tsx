@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Arrow from "@/public/images/Arrow.png";
 
@@ -26,11 +28,11 @@ const Projects = (props: Props) => {
   return (
     <div
       id="projects"
-      className=" relative w-[1440px] h-screen p-14 flex justify-center items-center flex-col"
+      className="relative sm:w-[1440px] xs:w-full h-screen xs:p-8 sm:p-14 flex justify-center items-center flex-col"
     >
-      <div className="absolute inset-0 bg-[url(/images/backgroundHomePage.png)] bg-[position:350px_-40px] -z-1 opacity-50 bg-no-repeat"></div>
+      <div className="absolute inset-0 bg-[url(/images/backgroundHomePage.png)] xs:bg-[position:30px_30px] xs:bg-[length:80%] sm:bg-[length:100%] sm:bg-[position:350px_-40px] -z-1 opacity-50 bg-no-repeat"></div>
       <p
-        className=" flex flex-1/4 uppercase text-3xl font-bold tracking-[0.45em] 
+        className="flex flex-1/4 uppercase xs:text-xl xs:tracking-[0.35em] sm:text-3xl font-bold sm:tracking-[0.45em] 
       justify-center items-center text-transparent bg-clip-text bg-linear-to-r
        from-orange-950  via-yellow-600 to-orange-950 animated-gradient"
       >
@@ -39,15 +41,13 @@ const Projects = (props: Props) => {
       <div className="flex flex-3/4">
         <ul className="flex flex-row gap-6 perspective-dramatic">
           <li
-            className="w-[402px] h-[618px] bg-[linear-gradient(33deg,_#121212_22%,_orange_68%,#9C4500_95%)] 
+            className="sm:w-[402px] sm:h-[618px] xs:w-[340px] xs:h-[600px] bg-[linear-gradient(33deg,_#121212_22%,_orange_68%,#9C4500_95%)] 
                      rounded-2xl flex flex-col px-[22px] py-9 border-1 border-indigo-500 shadow-[0_4px_20px_#959595]
                      transition-all duration-200  hover:shadow-[0_4px_20px_#9C4500]
-                     hover:translate-z-1 hover:rotate-x-1
-                       
-                     "
+                     hover:translate-z-1 hover:rotate-x-1"
           >
             <div className="flex flex-2/3">
-              <div className="h-[296px] w-[358px] bg-blck rounded-xl flex items-center  ">
+              <div className="h-[296px] w-[358px] bg-blck rounded-xl flex items-center">
                 <Image
                   className="ml-1"
                   src={DineEaseBG}
@@ -66,7 +66,7 @@ const Projects = (props: Props) => {
                 smoother dining experience.
               </p>
               <div className="flex mt-5">
-                <ul className="flex-3/4 flex flex-row justify-start gap-6">
+                <ul className="flex-3/4 flex flex-row justify-start sm:gap-6 xs:gap-4">
                   <li className="flex flex-col justify-center items-center">
                     <Image className="w-7 h-7" src={NetIcon} alt="icon" />
                   </li>
@@ -94,7 +94,7 @@ const Projects = (props: Props) => {
             </div>
           </li>
           <li
-            className="w-[402px] h-[618px] bg-[linear-gradient(33deg,_#121212_22%,_orange_68%,#9C4500_95%)]
+            className=" hidden w-[402px] h-[618px] bg-[linear-gradient(33deg,_#121212_22%,_orange_68%,#9C4500_95%)]
                      rounded-2xl flex flex-col px-[22px] py-9 border-1 border-indigo-500 shadow-[0_4px_20px_#959595]
                       transition-all duration-200  hover:shadow-[0_4px_20px_#9C4500]
                      hover:translate-z-1 hover:rotate-x-1"
@@ -143,7 +143,7 @@ const Projects = (props: Props) => {
             </div>
           </li>
           <li
-            className="w-[402px] h-[618px] bg-[linear-gradient(33deg,_#121212_22%,_orange_68%,#9C4500_95%)]
+            className=" hidden w-[402px] h-[618px] bg-[linear-gradient(33deg,_#121212_22%,_orange_68%,#9C4500_95%)]
                      rounded-2xl flex flex-col px-[22px] py-9 border-1 border-indigo-500 shadow-[0_4px_20px_#959595]
                      transition-all duration-200  hover:shadow-[0_4px_20px_#9C4500]
                      hover:translate-z-1 hover:rotate-x-1 "

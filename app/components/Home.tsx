@@ -52,7 +52,7 @@ const Home = (props: Props) => {
               </h1>
             </div>
             <div>
-              <ul className="sm:flex sm:flex-row sm:mt-12 xs:mt-14 gap-8 mb-8 xs:items-center xs:flex xs:justify-center xs:relative ">
+              <ul className="sm:flex sm:flex-row sm:mt-12 xs:mt-10 gap-8 mb-10 xs:items-center xs:flex xs:justify-center xs:relative ">
                 <li className=" border-1 border-secondarytext  rounded-4xl p-2 hover:bg-secondarytext transition duration-300">
                   <a href="mailto:lukaudovicic10@gmail.com" target="blank">
                     <Image className="w-6 h-6 " src={EmailIcon} alt="icon" />
@@ -77,13 +77,13 @@ const Home = (props: Props) => {
               <a
                 target="blank"
                 href="https://github.com/LukaUdovicic02"
-                className="font-bold rounded-md sm:py-2 sm:px-8 xs:py-2 xs:px-5 bg-header border-1 border-header transition ease-in-out duration-500 text-primarytext cursor-pointer hover:bg-transparent  hover:border-secondarytext hover:text-secondarytext hover:border-1"
+                className="font-bold rounded-md sm:py-2 sm:px-8 xs:py-2 xs:px-4 bg-header border-1 border-header transition ease-in-out duration-500 text-primarytext cursor-pointer hover:bg-transparent  hover:border-secondarytext hover:text-secondarytext hover:border-1"
               >
                 GitHub
               </a>
               <a
                 href="/api/blob"
-                className="transition ease-in-out duration-500 hover:border-header font-bold rounded-md py-2 xs:px-10 sm:px-12 border-1 border-secondarytext text-secondarytext cursor-pointer hover:bg-header hover:text-primarytext "
+                className="transition ease-in-out duration-500 hover:border-header font-bold rounded-md py-2 xs:px-9 sm:px-12 border-1 border-secondarytext text-secondarytext cursor-pointer hover:bg-header hover:text-primarytext "
               >
                 Download CV
               </a>
@@ -104,7 +104,7 @@ const Home = (props: Props) => {
 
         <div className="xs:hidden sm:bg-[#212121] sm:flex sm:justify-center sm:w-[1337px] sm:h-[126px] sm:rounded-md sm:mx-auto">
           <ul className="flex flex-row justify-center items-center gap-24">
-            <li className="flex flex-col justify-center items-center shake-on-hover">
+            <li className="flex flex-col justify-center items-center shake-on-hover" >
               <Image className="w-9 h-9" src={NetIcon} alt="icon" />
               <p className="text-primarytext font-bold">.NET C#</p>
             </li>

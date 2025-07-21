@@ -11,10 +11,10 @@ type Props = {};
 
 const Footer = (props: Props) => {
   return (
-    <div className="w-[1440px] h-[426px] p-14 flex flex-col gap-10 items-center relative  ">
+    <div className="sm:w-[1440px] xs:w-full h-[426px] xs:p-8 sm:p-14 flex flex-col gap-10 items-center relative  ">
       <div
-        className="bg-[url(/images/backgroundHomePage.png)] bg-no-repeat
-       bg-[position:440px] bg-[length:40%] -z-1 opacity-100 absolute inset-0"
+        className="bg-[url(/images/backgroundHomePage.png)] bg-no-repeat xs:bg-[position:0px] xs:bg-[length:100%_80%]
+       sm:bg-[position:440px] sm:bg-[length:40%] -z-1 opacity-100 absolute inset-0"
       ></div>
       <p
         className=" text-3xl font-bold  
@@ -23,7 +23,7 @@ const Footer = (props: Props) => {
       >
         Luka Udovicic
       </p>
-      <ul className="flex flex-row justify-around w-[444px]">
+      <ul className="flex flex-row justify-around sm:w-[444px] xs:w-full">
         <li className="hover:text-primarytext text-xl text-secondarytext transition duration-300 ">
           <a href="#home">Home</a>
         </li>
@@ -54,7 +54,7 @@ const Footer = (props: Props) => {
           </a>
         </li>
       </ul>
-      <div className="flex gap-15">
+      <div className="flex xs:flex-col xs:gap-4 sm:gap-15">
         <div className="flex flex-row gap-2 justify-center items-center">
           <Image className="w-6 h-6" src={EmailIcon} alt="icon" />
           <p className="text-xl text-secondarytext">lukaudovicic10@gmail.com</p>
@@ -64,7 +64,7 @@ const Footer = (props: Props) => {
           <p className="text-xl text-secondarytext">+45 50 31 64 14</p>
         </div>
       </div>
-      <span className="w-[593px] bottom-14 absolute h-1 bg-secondarytext "></span>
+      <span className="sm:w-[593px] xs:w-3/4 bottom-14 absolute h-1 bg-secondarytext "></span>
     </div>
   );
 };
