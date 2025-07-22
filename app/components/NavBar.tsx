@@ -11,7 +11,7 @@ const NavBar = (props: Props) => {
 
   const Open = () => {
     setIsOpen((prev) => !prev);
-    console.log(isOpen);
+    
   };
 
   return (
@@ -25,8 +25,8 @@ const NavBar = (props: Props) => {
       <ul
         className={`${
           isOpen ? "xs:flex" : "xs:hidden"
-        } sm:shadow-[0_4px_20px_#9C4500] sm:w-[580px] sm:h-[66px] sm:transition-all sm:hover:w-[700px] sm:hover:h-[90px] hover:border-1 sm:rounded-2xl sm:border-solid sm:duration-300 sm:items-center sm:border-1 sm:px-20 sm:py-4 sm:flex sm:flex-row sm:justify-between sm:text-2xl sm:font-bold sm:text-secondarytext md:hover:px-28 md:px-22
-        text-secondarytext xs:h-35 xs:w-18 xs:gap-2 xs:flex-col xs:backdrop-blur-2xl xs:rounded-lg xs:absolute sm:top-0 xs:top-10`}
+        } sm:shadow-[0_4px_20px_#9C4500] sm:w-[580px] sm:h-[66px] sm:transition-all sm:hover:w-[700px] sm:hover:h-[90px] sm:hover:border-1 sm:rounded-2xl sm:border-solid sm:duration-300 sm:items-center sm:border-1 sm:px-20 sm:py-4 sm:flex sm:flex-row sm:justify-between sm:text-2xl sm:font-bold sm:text-secondarytext md:hover:px-28 md:px-22
+        text-secondarytext xs:h-35 xs:w-18 xs:gap-2 xs:flex-col xs:backdrop-blur-2xl xs:rounded-lg xs:absolute  sm:top-0 xs:top-10`}
       >
         <li className="hover:text-primarytext transition duration-300 xs:text-lg sm:text-2xl ">
           <Link href="#home">Home</Link>
