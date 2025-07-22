@@ -2,9 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Arrow from "@/public/images/Arrow.png";
-
 import Image from "next/image";
-
 import { Project } from "../globalTypes";
 
 type Props = {
@@ -13,42 +11,58 @@ type Props = {
 
 function CustomCarousel({ projects }: Props) {
   const [current, setCurrent] = useState<number>(0);
-  const slideCount = projects.length;
+  const [windowWidth, setWindowWidth] = useState<number>(0);
+
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const getVisibleCards = () => {
+    if (windowWidth >= 1280) return 3; // xl
+    if (windowWidth >= 1024) return 2; // lg
+    if (windowWidth >= 768) return 2; // md
+    return 1;
+  };
+
+  const visible = getVisibleCards();
+  const maxIndex = projects.length - visible;
 
   const nextSlide = () => {
-    setCurrent((current + 1) % slideCount);
+    setCurrent((prev) => (prev >= maxIndex ? 0 : prev + 1));
   };
 
   const prevSlide = () => {
-    setCurrent((current - 1) % slideCount);
+    setCurrent((prev) => (prev <= 0 ? maxIndex : prev - 1));
   };
 
-  /* 
-  useEffect(() => {
-    const interval = setInterval(nextSlide, 8000);
-
-    return () => clearInterval(interval);
-  }, [slideCount]);
-  */
+  const visibleProjects = projects.slice(current, current + visible);
 
   return (
-    <div className="w-full flex justify-center">
-      <div className="flex flex-wrap gap-6 justify-center">
-        <div className="block md:hidden">
-          <ProjectCard project={projects[0]} />
-        </div>
+    <div className="w-full flex flex-col items-center relative">
+      <div className="flex justify-between w-full px-4 mb-4 xl:hidden">
+        <button
+          onClick={prevSlide}
+          className="sm:absolute sm:left-0 sm:bottom-[45%] w-10 h-10 flex justify-center border-1 border-secondarytext cursor-pointer hover:bg-secondarytext hover:text-primarytext items-center rounded-full text-white text-lg font-bold"
+        >
+          ←
+        </button>
 
-        <div className="hidden md:flex xl:hidden gap-6">
-          {projects.slice(0, 2).map((project, index) => (
-            <ProjectCard key={index} project={project} />
-          ))}
-        </div>
+        <button
+          onClick={nextSlide}
+          className="sm:absolute sm:right-0 sm:bottom-[45%] w-10 h-10 flex border-1 border-secondarytext justify-center cursor-pointer hover:bg-secondarytext hover:text-primarytext items-center rounded-full text-white text-lg font-bold"
+        >
+          →
+        </button>
+      </div>
 
-        <div className="hidden xl:flex gap-6">
-          {projects.slice(0, 3).map((project, index) => (
-            <ProjectCard key={index} project={project} />
-          ))}
-        </div>
+      <div className="flex gap-6 justify-center flex-wrap md:flex-nowrap">
+        {visibleProjects.map((project, index) => (
+          <ProjectCard key={index} project={project} />
+        ))}
       </div>
     </div>
   );
