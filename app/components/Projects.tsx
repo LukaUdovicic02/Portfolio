@@ -28,9 +28,9 @@ const Projects = (props: Props) => {
   return (
     <div
       id="projects"
-      className="relative sm:w-[1440px] xs:w-full h-screen xs:p-8 sm:p-14 flex justify-center items-center flex-col"
+      className="relative xs:w-full h-screen xs:p-8 sm:p-14 flex justify-center items-center flex-col"
     >
-      <div className="absolute inset-0 bg-[url(/images/backgroundHomePage.png)] xs:bg-[position:30px_30px] xs:bg-[length:80%] sm:bg-[length:100%] sm:bg-[position:350px_-40px] -z-1 opacity-50 bg-no-repeat"></div>
+      <div className="absolute inset-0 bg-[url(/images/backgroundHomePage.png)] xs:bg-[position:30px_30px] xs:bg-[length:80%] sm:bg-[length:100%] md:bg-[position:350px_-40px] -z-1 opacity-50 bg-no-repeat"></div>
       <p
         className="flex flex-1/4 uppercase xs:text-xl xs:tracking-[0.35em] sm:text-3xl font-bold sm:tracking-[0.45em] 
       justify-center items-center text-transparent bg-clip-text bg-linear-to-r
@@ -44,12 +44,12 @@ const Projects = (props: Props) => {
             className="sm:w-[402px] sm:h-[618px] xs:w-[340px] xs:h-[600px] bg-[linear-gradient(33deg,_#121212_22%,_orange_68%,#9C4500_95%)] 
                      rounded-2xl flex flex-col px-[22px] py-9 border-1 border-indigo-500 shadow-[0_4px_20px_#959595]
                      transition-all duration-200  hover:shadow-[0_4px_20px_#9C4500]
-                     hover:translate-z-1 hover:rotate-x-1"
+                     hover:translate-z-1 hover:rotate-x-1 md:w-[340px] lg:w-[402px]"
           >
             <div className="flex flex-2/3">
               <div className="h-[296px] w-[358px] bg-blck rounded-xl flex items-center">
                 <Image
-                  className="ml-1"
+                  className="ml-1 "
                   src={DineEaseBG}
                   alt="dine ease background"
                 />
@@ -94,15 +94,15 @@ const Projects = (props: Props) => {
             </div>
           </li>
           <li
-            className=" hidden w-[402px] h-[618px] bg-[linear-gradient(33deg,_#121212_22%,_orange_68%,#9C4500_95%)]
-                     rounded-2xl flex flex-col px-[22px] py-9 border-1 border-indigo-500 shadow-[0_4px_20px_#959595]
-                      transition-all duration-200  hover:shadow-[0_4px_20px_#9C4500]
-                     hover:translate-z-1 hover:rotate-x-1"
+            className="xs:hidden w-[402px] h-[618px] bg-[linear-gradient(33deg,_#121212_22%,_orange_68%,#9C4500_95%)]
+                     rounded-2xl md:flex flex-col px-[22px] py-9 border-1 border-indigo-500 shadow-[0_4px_20px_#959595]
+                     transition-all duration-200  hover:shadow-[0_4px_20px_#9C4500]
+                     hover:translate-z-1 hover:rotate-x-1 md:w-[340px] lg:w-[402px]"
           >
             <div className="flex flex-2/3">
               <div className="h-[296px] w-[358px] bg-blck rounded-xl">
                 <Image
-                  className="ml-3 mt-2"
+                  className="ml-3 md:ml-0 mt-2"
                   src={VRCS}
                   alt="vr cs background"
                 />
@@ -143,10 +143,10 @@ const Projects = (props: Props) => {
             </div>
           </li>
           <li
-            className=" hidden w-[402px] h-[618px] bg-[linear-gradient(33deg,_#121212_22%,_orange_68%,#9C4500_95%)]
-                     rounded-2xl flex flex-col px-[22px] py-9 border-1 border-indigo-500 shadow-[0_4px_20px_#959595]
+            className="xs:hidden w-[402px] h-[618px] bg-[linear-gradient(33deg,_#121212_22%,_orange_68%,#9C4500_95%)]
+                     rounded-2xl xl:flex flex-col px-[22px] py-9 border-1 border-indigo-500 shadow-[0_4px_20px_#959595]
                      transition-all duration-200  hover:shadow-[0_4px_20px_#9C4500]
-                     hover:translate-z-1 hover:rotate-x-1 "
+                     hover:translate-z-1 hover:rotate-x-1"
           >
             <div className="flex flex-2/3">
               <div className="h-[296px] w-[358px] bg-blck rounded-xl">

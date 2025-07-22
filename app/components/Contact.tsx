@@ -39,11 +39,11 @@ function Contact({}: Props) {
   return (
     <div
       id="contact"
-      className="sm:w-[1440px] xs:w-full h-screen xs:p-8 sm:p-14 flex flex-col gap-15 items-center relative"
+      className="xs:w-full h-screen xs:p-8 sm:p-12 md:p-14 flex flex-col gap-15 items-center relative"
     >
       <div
         className="bg-[url(/images/backgroundHomePage.png)] bg-no-repeat xs:bg-[position:0px_150px] xs:bg-[length:115%_60%]
-       sm:bg-[position:350px] -z-1 opacity-100 absolute inset-0"
+                    -z-1 opacity-100 absolute inset-0"
       ></div>
       <p
         className=" uppercase sm:text-3xl font-bold xs:text-xl xs:tracking-[0.35em] sm:tracking-[0.45em] 
@@ -52,14 +52,14 @@ function Contact({}: Props) {
       >
         contact
       </p>
-      <p className="text-secondarytext xs:w-full xs:h-[150px] sm:text-xl align-top sm:w-[764px] sm:h-[200px] text-center  tracking-[0.2em]">
+      <p className="text-secondarytext xs:w-full xs:h-[150px] sm:text-xl xs:text-[17px] align-top md:w-[764px] sm:h-[200px] text-center tracking-[0.2em]">
         You can reach out using the form below or connect with me through one of
         the platforms. I'll get back to you as soon as possible!
       </p>
 
       <form
         onSubmit={onSubmit}
-        className="flex flex-col sm:w-[600px]  xs:w-full relative "
+        className="flex flex-col md:w-[600px]  xs:w-full relative "
       >
         <div className="relative mb-15">
           <input

@@ -11,9 +11,14 @@ const About = (props: Props) => {
   return (
     <div
       id="about"
-      className="sm:w-[1440px] xs:w-full h-screen xs:p-8 sm:p-14 flex flex-col justify-center items-center relative"
+      className=" xs:w-full h-screen xs:p-8 sm:p-14 flex flex-col justify-center items-center relative"
     >
-      <div className="absolute inset-0 bg-[url(/images/backgroundHomePage.png)] bg-[position:-250px_420px] -z-1 opacity-70 bg-[length:140%_60%] bg-no-repeat"></div>
+      <div
+        className="absolute inset-0 bg-[url(/images/backgroundHomePage.png)] 
+                   sm:bg-[position:-50px_600px] xs:bg-[position:-100px_420px] -z-1 opacity-70 
+                   sm:bg-[length:120%_30%] md:bg-[length:120%_50%]
+                   xs:bg-[length:140%_60%] bg-no-repeat"
+      ></div>
 
       <div className="flex flex-1/2 flex-col items-center justify-start gap-15">
         <p
@@ -23,7 +28,7 @@ const About = (props: Props) => {
         >
           ABOUT ME
         </p>
-        <p className="text-secondarytext sm:text-xl sm:tracking-[0.2em] align-top xs:w-full sm:w-[764px] sm:h-[246px] text-center mb-16 ">
+        <p className="text-secondarytext sm:text-xl sm:tracking-[0.2em] align-top xs:w-full md:w-[764px] sm:h-[246px] text-center mb-16 ">
           Software Engineering graduate and solution-oriented developer with
           hands-on experience across different areas of the software development
           lifecycle. I'm driven by the challenge of building clean, effective
@@ -35,9 +40,9 @@ const About = (props: Props) => {
       </div>
 
       <div className="flex flex-1/2 ">
-        <ul className="sm:grid sm:grid-flow-col sm:grid-rows-2 sm:gap-10 ">
+        <ul className="md:grid md:grid-flow-col md:grid-rows-2 md:gap-10 ">
           <li className=" group text-secondarytext hover:translate-2 hover:duration-1000 relative">
-            <div className="flex sm:flex-row xs:inline">
+            <div className="flex md:flex-row xs:inline">
               <div className="mr-2">
                 <Image src={ArchIcon} alt="architecture Icon" />
               </div>
@@ -53,19 +58,19 @@ const About = (props: Props) => {
                   and easy to maintain.
                 </p>
               </div>
-              <span className="absolute xs:mt-7 xs:botton-0 sm:bottom-10 left-1/2 h-0.5 xs:w-3/4 sm:w-1/5 bg-secondarytext transition-all duration-500 origin-center transform -translate-x-1/2 group-hover:w-full"></span>
+              <span className="absolute xs:mt-7 xs:botton-0  left-1/2 h-0.5 xs:w-3/4 sm:w-1/5 bg-secondarytext transition-all duration-500 origin-center transform -translate-x-1/2 group-hover:w-full"></span>
             </div>
           </li>
-          <li className="xs:hidden sm:display group text-secondarytext hover:translate-2 hover:duration-1000 relative">
-            <div className="flex flex-row">
+          <li className="xs:hidden md:block group text-secondarytext hover:translate-2 hover:duration-1000 relative">
+            <div className="flex md:flex-row xs:inline">
               <div className="mr-2">
                 <Image src={MaintenenaceIcon} alt="maintenance Icon" />
               </div>
               <div>
-                <p className="text-[22px] align-top uppercase font-bold text-header tracking-[0.2em] ml-5 mb-5">
+                <p className="text-[22px] align-top uppercase font-bold text-header tracking-[0.2em] mb-5">
                   maintenance
                 </p>
-                <p className="text-secondarytext w-[431px] text-[16px]">
+                <p className="text-secondarytext xs:w-full sm:w-[431px] text-[16px]">
                   I can support you after launch by keeping your application up
                   to date, fixing bugs, and making improvements over time.
                   Whether it's small tweaks or ongoing updates, I'm here to help
@@ -73,18 +78,18 @@ const About = (props: Props) => {
                 </p>
               </div>
             </div>
-            <span className="absolute bottom-10 left-1/2 h-0.5 w-1/5 bg-secondarytext transition-all duration-500 origin-center transform -translate-x-1/2 group-hover:w-full"></span>
+            <span className="absolute xs:mt-7 xs:botton-0  left-1/2 h-0.5 xs:w-3/4 sm:w-1/5 bg-secondarytext transition-all duration-500 origin-center transform -translate-x-1/2 group-hover:w-full"></span>
           </li>
-          <li className=" xs:hidden sm:display group text-secondarytext hover:translate-2 hover:duration-1000 relative">
-            <div className="flex flex-row">
+          <li className=" xs:hidden lg:block group text-secondarytext hover:translate-2 hover:duration-1000 relative">
+            <div className="flex md:flex-row xs:inline">
               <div className="mr-2">
                 <Image src={DevelopmentIcon} alt="architecture Icon" />
               </div>
               <div>
-                <p className="text-[22px] align-top uppercase font-bold text-header tracking-[0.2em] ml-5 mb-5">
+                <p className="text-[22px] align-top uppercase font-bold text-header tracking-[0.2em] mb-5">
                   development
                 </p>
-                <p className="text-secondarytext w-[431px] text-[16px]">
+                <p className="text-secondarytext xs:w-full sm:w-[431px] text-[16px]">
                   I can develop your application based on your ideas and
                   functional needs. Whether it's building from scratch or
                   expanding on an existing codebase, I focus on writing clean,
@@ -93,18 +98,18 @@ const About = (props: Props) => {
                 </p>
               </div>
             </div>
-            <span className="absolute bottom-10 left-1/2 h-0.5 w-1/5 bg-secondarytext transition-all duration-500 origin-center transform -translate-x-1/2 group-hover:w-full"></span>
+            <span className="absolute xs:mt-7 xs:botton-0  left-1/2 h-0.5 xs:w-3/4 sm:w-1/5 bg-secondarytext transition-all duration-500 origin-center transform -translate-x-1/2 group-hover:w-full"></span>
           </li>
-          <li className=" xs:hidden sm:display group text-secondarytext hover:translate-2 hover:duration-1000 relative">
-            <div className="flex flex-row">
+          <li className=" xs:hidden lg:block group text-secondarytext hover:translate-2 hover:duration-1000 relative">
+            <div className="flex md:flex-row xs:inline">
               <div className="mr-2">
                 <Image src={TestingIcon} alt="architecture Icon" />
               </div>
               <div>
-                <p className="text-[22px] align-top uppercase font-bold text-header tracking-[0.2em] ml-5 mb-5">
+                <p className="text-[22px] align-top uppercase font-bold text-header tracking-[0.2em] mb-5">
                   testing
                 </p>
-                <p className="text-secondarytext w-[431px] text-[16px]">
+                <p className="text-secondarytext xs:w-full sm:w-[431px] text-[16px]">
                   I can help ensure your application works as expected by
                   writing meaningful tests and checking for bugs. I focus on
                   catching issues early and making sure your system stays
@@ -112,7 +117,7 @@ const About = (props: Props) => {
                 </p>
               </div>
             </div>
-            <span className="absolute bottom-10 left-1/2 h-0.5 w-1/5 bg-secondarytext transition-all duration-500 origin-center transform -translate-x-1/2 group-hover:w-full"></span>
+            <span className="absolute xs:mt-7 xs:botton-0  left-1/2 h-0.5 xs:w-3/4 sm:w-1/5 bg-secondarytext transition-all duration-500 origin-center transform -translate-x-1/2 group-hover:w-full"></span>
           </li>
         </ul>
       </div>

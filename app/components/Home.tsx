@@ -18,7 +18,10 @@ type Props = {};
 
 const Home = (props: Props) => {
   return (
-    <div id="home" className="sm:w-[1440px] xs:w-full h-screen xs:p-8 sm:p-14 ">
+    <div
+      id="home"
+      className="sm:w-full xs:w-full h-screen xs:p-8 sm:p-12 md:p-14"
+    >
       <div className="flex flex-col h-full z-10 relative">
         <NavBar />
 
@@ -26,19 +29,23 @@ const Home = (props: Props) => {
           className="
           bg-no-repeat bg-[url(/images/backgroundHomePage.png)] flex flex-grow 
           xs:bg-[length:110%_40%] xs:bg-[position:-10px_-30px]
-          xs:juftify-center xs:flex-col sm:flex-row
-          sm:items-center sm:justify-between 
-          sm:bg-[position:-50px] "
+          
+          xs:juftify-center xs:flex-col lg:flex-row
+          md:items-center md:justify-between 
+          lg:bg-[position:-40px]
+          lg:bg-[length:60%_40%]"
         >
-          <div className="sm:w-[674px] sm:h-[527px] xs:flex xs:flex-col xs:items-center">
-            <div className="xs:flex xs:flex-col xs:items-center sm:block">
-              <h1 className="text-2xl  text-secondarytext mb-2">Hi I am</h1>
+          <div className="xl:w-[674px] xl:h-[527px] xs:flex xs:flex-col lg:items-start xs:items-center">
+            <div className="xs:flex xs:flex-col  xs:items-center lg:block">
+              <h1 className="text-2xl text-secondarytext mb-2 sm:mt-2">
+                Hi I am
+              </h1>
               <h1 className="text-3xl text-secondarytext mb-8">
                 Luka Udovicic
               </h1>
             </div>
             <div>
-              <h1 className="sm:text-7xl xs:text-3xl  text-header font-bold xs:w-full sm:w-[700px]">
+              <h1 className="xl:text-7xl lg:text-4xl md:text-5xl sm:text-4xl xs:text-3xl  text-header font-bold xs:w-full xl:w-[700px]">
                 Full-Stack{" "}
                 <span
                   className="blinking-letter bg-linear-to-r text-transparent bg-clip-text
@@ -47,7 +54,7 @@ const Home = (props: Props) => {
                   Software
                 </span>
               </h1>
-              <h1 className="sm:text-7xl xs:text-3xl text-header font-bold xs:w-full sm:w-[700px]">
+              <h1 className="xl:text-7xl lg:text-4xl md:text-5xl sm:text-4xl xs:text-3xl text-header font-bold xs:w-full xl:w-[700px]">
                 Engineer
               </h1>
             </div>
@@ -91,20 +98,20 @@ const Home = (props: Props) => {
           </div>
 
           <div className="bg-[url(/images/backgroundHomePage.png)] bg-no-repeat bg-[length:60%_60%] bg-[position:100px] relative">
-            <div className="absolute z-2 bottom-0 xs:w-full xs:h-full sm:w-full sm:h-full bg-gradient-to-bl from-blck/0 to-blck"></div>
-            <div className="absolute bottom-0 sm:w-[544px] xs:w-full xs:h-full z-2 sm:h-[593px] bg-gradient-to-t from-blck/30 to-blck/0"></div>
+            <div className="absolute z-2 bottom-0 xs:w-full xs:h-full bg-gradient-to-bl from-blck/0 to-blck"></div>
+            <div className="absolute bottom-0 md:w-[544px] xs:w-full xs:h-full z-2 sm:h-[593px] bg-gradient-to-t from-blck/30 to-blck/0"></div>
 
             <Image
               src={slika}
               alt="profile picture"
-              className="object-contain z-1 aboslute sm:w-[543px] sm:h-[592px] xs:w-full xs:h-full "
+              className="object-contain z-1 aboslute lg:w-[400px] lg:h-[500px] xs:w-full xs:h-full sm:max-w-[550px] sm:max-h-[700px] "
             />
           </div>
         </div>
 
-        <div className="xs:hidden sm:bg-[#212121] sm:flex sm:justify-center sm:w-[1337px] sm:h-[126px] sm:rounded-md sm:mx-auto">
-          <ul className="flex flex-row justify-center items-center gap-24">
-            <li className="flex flex-col justify-center items-center shake-on-hover" >
+        <div className="xs:hidden sm:bg-[#212121] lg:flex lg:justify-center lg:w-full lg:h-[126px] lg:rounded-md lg:mx-auto">
+          <ul className="flex flex-row justify-center items-center lg:gap-14 xl:gap-24">
+            <li className="flex flex-col justify-center items-center shake-on-hover">
               <Image className="w-9 h-9" src={NetIcon} alt="icon" />
               <p className="text-primarytext font-bold">.NET C#</p>
             </li>
