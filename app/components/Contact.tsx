@@ -39,7 +39,7 @@ function Contact({}: Props) {
   return (
     <div
       id="contact"
-      className="xs:w-full h-screen xs:p-8 sm:p-12 md:p-14 flex flex-col gap-15 items-center relative"
+      className="max-w-[1350px] mx-auto xs:w-full h-screen xs:p-8 sm:p-12 md:p-14 flex flex-col gap-15 items-center relative"
     >
       <div
         className="bg-[url(/images/backgroundHomePage.png)] bg-no-repeat xs:bg-[position:0px_150px] xs:bg-[length:115%_60%]

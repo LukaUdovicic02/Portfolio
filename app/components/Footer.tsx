@@ -11,10 +11,10 @@ type Props = {};
 
 const Footer = (props: Props) => {
   return (
-    <div className=" xs:w-full h-[426px] xs:p-8 sm:p-14 flex flex-col gap-10 items-center relative  ">
+    <div className="max-w-[1350px] mx-auto xs:w-full h-[426px] xs:p-8 sm:p-14 flex flex-col gap-10 items-center relative  ">
       <div
         className="bg-[url(/images/backgroundHomePage.png)] bg-no-repeat xs:bg-[position:0px] xs:bg-[length:100%_80%]
-       md:bg-[position:250px] md:bg-[length:50%] -z-1 opacity-100 absolute inset-0"
+       md:bg-[position:250px] lg:bg-[position:280px]  md:bg-[length:50%] -z-1 opacity-100 absolute inset-0"
       ></div>
       <p
         className=" text-3xl font-bold  

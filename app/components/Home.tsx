@@ -20,7 +20,7 @@ const Home = (props: Props) => {
   return (
     <div
       id="home"
-      className="sm:w-full xs:w-full h-screen xs:p-8 sm:p-12 md:p-14"
+      className="max-w-[1350px] mx-auto sm:w-full xs:w-full h-screen xs:p-8 sm:p-12 md:p-14"
     >
       <div className="flex flex-col h-full z-10 relative">
         <NavBar />
@@ -32,7 +32,7 @@ const Home = (props: Props) => {
           
           xs:juftify-center xs:flex-col lg:flex-row
           md:items-center md:justify-between 
-          lg:bg-[position:-40px]
+          lg:bg-[position:-60px_200px]
           lg:bg-[length:60%_40%]"
         >
           <div className="xl:w-[674px] xl:h-[527px] xs:flex xs:flex-col lg:items-start xs:items-center">
@@ -104,7 +104,8 @@ const Home = (props: Props) => {
             <Image
               src={slika}
               alt="profile picture"
-              className="object-contain z-1 aboslute lg:w-[400px] lg:h-[500px] xs:w-full xs:h-full sm:max-w-[550px] sm:max-h-[700px] "
+              className="object-contain z-1 aboslute lg:w-[400px] lg:h-[500px] 
+              xs:w-full xs:h-full sm:max-w-[550px] sm:max-h-[700px] xl:w-[600px]  "
             />
           </div>
         </div>

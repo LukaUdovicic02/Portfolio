@@ -28,9 +28,12 @@ const Projects = (props: Props) => {
   return (
     <div
       id="projects"
-      className="relative xs:w-full h-screen xs:p-8 sm:p-14 flex justify-center items-center flex-col"
+      className="max-w-[1350px] mx-auto relative xs:w-full h-screen xs:p-8 sm:p-14 flex justify-center items-center flex-col"
     >
-      <div className="absolute inset-0 bg-[url(/images/backgroundHomePage.png)] xs:bg-[position:30px_30px] xs:bg-[length:80%] sm:bg-[length:100%] md:bg-[position:350px_-40px] -z-1 opacity-50 bg-no-repeat"></div>
+      <div
+        className="absolute inset-0 bg-[url(/images/backgroundHomePage.png)] xs:bg-[position:30px_30px] xs:bg-[length:80%] sm:bg-[length:100%] 
+      md:bg-[position:350px_-40px] lg:bg-[position:30px_-40px] -z-1 opacity-50 bg-no-repeat"
+      ></div>
       <p
         className="flex flex-1/4 uppercase xs:text-xl xs:tracking-[0.35em] sm:text-3xl font-bold sm:tracking-[0.45em] 
       justify-center items-center text-transparent bg-clip-text bg-linear-to-r
