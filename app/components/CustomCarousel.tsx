@@ -48,7 +48,7 @@ function CustomCarousel({ projects }: Props) {
           onClick={prevSlide}
           className="absolute left-[-30px] top-1/2 transform -translate-y-1/2 w-12 h-12 
           flex justify-center items-center border-1 border-header text-white text-lg font-bold 
-           cursor-pointer hover:text-2xl hover:text-header rounded-full backdrop-blur-sm"
+         cursor-pointer hover:text-2xl hover:text-header rounded-full backdrop-blur-sm"
         >
           <span className="-mt-[2px]">←</span>
         </button>
