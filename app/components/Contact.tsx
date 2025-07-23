@@ -57,13 +57,13 @@ function Contact() {
       <p
         className=" uppercase sm:text-3xl font-bold 2xs:text-xl 2xs:tracking-[0.35em] sm:tracking-[0.45em] 
       justify-center items-center text-transparent bg-clip-text bg-linear-to-r
-       from-orange-900  via-yellow-600 to-orange-900 mt-10 animated-gradient"
+       from-orange-900  via-yellow-600 to-orange-900 2xs:mt-2 sm:mt-10 animated-gradient"
       >
         contact
       </p>
       <p
         className="text-secondarytext 2xs:w-full 2xs:h-[150px] sm:text-xl 
-      xs:text-[17px] 2xs:text-[15px] align-top md:w-[764px] sm:h-[200px] text-center tracking-[0.2em]"
+       2xs:text-[15px] align-top md:w-[764px] sm:h-[200px] text-center tracking-[0.2em]"
       >
         You can reach out using the form below or connect with me through one of
         the platforms. I&apos;ll get back to you as soon as possible!
@@ -80,7 +80,7 @@ function Contact() {
             required
             onChange={(e) => setName(e.target.value)}
             placeholder="ENTER YOUR NAME*"
-            className="pb-6 px-4 bg-transparent xs:text-lg w-full text-primarytext placeholder-secondarytext focus:outline-none"
+            className="pb-6 px-4 bg-transparent xs:text-md  w-full text-primarytext placeholder-secondarytext focus:outline-none"
           />
           <span className="bg-secondarytext absolute bottom-0 h-1 w-full left-0"></span>
         </div>
@@ -91,7 +91,7 @@ function Contact() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="ENTER YOUR EMAIL*"
-            className="pb-6 px-4 bg-transparent xs:text-lg w-full text-primarytext placeholder-secondarytext focus:outline-none"
+            className="pb-6 px-4 bg-transparent xs:text-md w-full text-primarytext placeholder-secondarytext focus:outline-none"
           />
           <span className="bg-secondarytext absolute bottom-0 h-1 w-full left-0"></span>
         </div>
@@ -101,11 +101,11 @@ function Contact() {
             value={phonenumber}
             onChange={(e) => setPhone(e.target.value)}
             placeholder="PHONE NUMBER"
-            className="pb-6 px-4 bg-transparent xs:text-lg w-full text-primarytext placeholder-secondarytext focus:outline-none"
+            className="pb-6 px-4 bg-transparent xs:text-md w-full text-primarytext placeholder-secondarytext focus:outline-none"
           />
           <span className="bg-secondarytext absolute bottom-0 h-1 w-full left-0"></span>
         </div>
-        <div className="relative xs:mb-13 sm:mb-15 2xs:mb-5">
+        <div className="relative xs:mb-13 sm:mb-15 2xs:mb-5 ">
           <textarea
             placeholder="ENTER YOUR MESSAGE*"
             required
@@ -123,7 +123,7 @@ function Contact() {
           className="bg-header left-1/2 -translate-x-1/2 relative text-primarytext
          xs:w-[129px] h-[39px] uppercase rounded-2xl font-bold tracking-[0.2em] cursor-pointer
          hover:border-1 hover:border-secondarytext hover:text-secondarytext hover:bg-transparent
-         xs:bottom-8 sm:bottom-0
+         xs:bottom-9 sm:bottom-0
          "
           value="submit"
         />
