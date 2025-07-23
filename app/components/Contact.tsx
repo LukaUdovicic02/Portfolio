@@ -1,11 +1,22 @@
 "use client";
-import React, { useState } from "react";
+
+import React, { useEffect, useState } from "react";
 
 function Contact() {
   const [name, setName] = useState<string>("");
   const [phonenumber, setPhone] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMsg] = useState<string>("");
+  const [windowWidth, setWindowWidth] = useState<number | null>(null);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const handleResize = () => setWindowWidth(window.innerWidth);
+      setWindowWidth(window.innerWidth);
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []);
 
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -100,7 +111,7 @@ function Contact() {
             onChange={(e) => setMsg(e.target.value)}
             className="w-full px-4 bg-transparent text-primarytext placeholder-secondarytext xs:text-lg 
             resize-none pb-2 focus:outline-none"
-            rows={window.innerWidth <= 384 ? 3 : 4}
+            rows={windowWidth && windowWidth <= 384 ? 3 : 4}
           />
           <span className="bg-secondarytext absolute bottom-0 h-1 w-full left-0"></span>
         </div>
