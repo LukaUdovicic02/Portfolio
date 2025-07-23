@@ -7,6 +7,7 @@
   --color-blck: #121212;
 
   --breakpoint-xs: 384px;
+  --breakpoint-2xs: 280px;
 }
 
 @keyframes soft-blink {
