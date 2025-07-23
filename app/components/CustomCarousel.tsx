@@ -43,23 +43,21 @@ function CustomCarousel({ projects }: Props) {
 
   return (
     <div className="w-full flex flex-col items-center relative ">
-      <div className="flex justify-between w-full px-4  xl:hidden">
+      <div className="xl:hidden">
         <button
           onClick={prevSlide}
-          className="2xs:backdrop-blur-sm 2xs:absolute 2xs:left-0 
-          2xs:bottom-2 sm:left-0 sm:bottom-[45%] w-12 h-12 flex justify-center border-1
-           border-header cursor-pointer hover:text-2xl hover:text-header 
-           items-center rounded-full text-white text-lg font-bold"
+          className="absolute left-[-30px] top-1/2 transform -translate-y-1/2 w-12 h-12 
+          flex justify-center items-center border-1 border-header text-white text-lg font-bold 
+           cursor-pointer hover:text-2xl hover:text-header rounded-full backdrop-blur-sm"
         >
           <span className="-mt-[2px]">←</span>
         </button>
 
         <button
           onClick={nextSlide}
-          className="2xs:backdrop-blur-sm 2xs:absolute 2xs:right-0 2xs:bottom-2
-           sm:right-0 sm:bottom-[45%] w-12 h-12 flex border-1 border-header 
-           justify-center cursor-pointer hover:text-2xl 
-           hover:text-header items-center rounded-full text-white text-lg font-bold"
+          className="absolute right-[-30px] top-1/2 transform -translate-y-1/2 w-12 h-12 
+         flex justify-center items-center border-1 border-header text-white text-lg font-bold 
+         cursor-pointer hover:text-2xl hover:text-header rounded-full backdrop-blur-sm"
         >
           <span className="-mt-[2px]">→</span>
         </button>
@@ -77,7 +75,7 @@ function CustomCarousel({ projects }: Props) {
 const ProjectCard = ({ project }: { project: Project }) => {
   return (
     <div
-      className="sm:w-[402px] sm:h-[618px] 2xs:w-[250px] xs:w-[340px] 2xs:h-[500px] md:w-[340px] lg:w-[402px]
+      className="sm:w-[402px] sm:h-[618px] 2xs:w-[250px] xs:w-[340px] 2xs:h-[550px] md:w-[340px] lg:w-[402px]
                  bg-[linear-gradient(33deg,_#121212_22%,_orange_68%,#9C4500_95%)] 
                  rounded-2xl flex flex-col px-[22px] py-9 border border-indigo-500 
                  shadow-[0_4px_20px_#959595] transition-all duration-300 
