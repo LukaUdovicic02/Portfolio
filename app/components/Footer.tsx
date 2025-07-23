@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <div className="max-w-[1350px] mx-auto 2xs:w-full 2xs:h-[500px] xs:h-[426px] 2xs:p-8 sm:p-14 flex flex-col 2xs:gap-5 xs:gap-10 items-center relative  ">
+    <div className="max-w-[1350px] mx-auto 2xs:w-full  2xs:h-[426px] 2xs:p-8 sm:p-14 flex flex-col 2xs:gap-5 xs:gap-10 items-center relative  ">
       <div
         className="bg-[url(/images/backgroundHomePage.png)] bg-no-repeat 2xs:bg-[position:0px] 2xs:bg-[length:100%_80%]
        md:bg-[position:250px] lg:bg-[position:280px]  md:bg-[length:50%] -z-1 opacity-100 absolute inset-0"

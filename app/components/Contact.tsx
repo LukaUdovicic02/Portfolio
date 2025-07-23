@@ -121,7 +121,7 @@ function Contact() {
           className="bg-header left-1/2 -translate-x-1/2 relative text-primarytext
          xs:w-[129px] h-[39px] uppercase rounded-2xl font-bold tracking-[0.2em] cursor-pointer
          hover:border-1 hover:border-secondarytext hover:text-secondarytext hover:bg-transparent
-         2xs:
+         xs:bottom-8 sm:bottom-0
          "
           value="submit"
         />
