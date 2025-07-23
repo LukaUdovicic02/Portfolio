@@ -42,7 +42,7 @@ function CustomCarousel({ projects }: Props) {
   const visibleProjects = projects.slice(current, current + visible);
 
   return (
-    <div className="w-full flex flex-col items-center relative flex-4/5 ">
+    <div className="w-full flex flex-col items-center relative ">
       <div className="flex justify-between w-full px-4  xl:hidden">
         <button
           onClick={prevSlide}
@@ -77,7 +77,7 @@ function CustomCarousel({ projects }: Props) {
 const ProjectCard = ({ project }: { project: Project }) => {
   return (
     <div
-      className="sm:w-[402px] sm:h-[618px] 2xs:w-[250px] xs:w-[340px] 2xs:h-[600px] md:w-[340px] lg:w-[402px]
+      className="sm:w-[402px] sm:h-[618px] 2xs:w-[250px] xs:w-[340px] 2xs:h-[500px] md:w-[340px] lg:w-[402px]
                  bg-[linear-gradient(33deg,_#121212_22%,_orange_68%,#9C4500_95%)] 
                  rounded-2xl flex flex-col px-[22px] py-9 border border-indigo-500 
                  shadow-[0_4px_20px_#959595] transition-all duration-300 
