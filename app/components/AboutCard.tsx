@@ -45,25 +45,25 @@ function AboutCard({ About }: Props) {
   );
 
   return (
-    <ul className="animate-blink  grid sm:grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 xl:gap-25 ">
+    <ul className="animate-blink grid sm:grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 xl:gap-25">
       {visibleItems.map((item, index) => (
         <li
           key={index}
-          className=" group text-secondarytext hover:translate-2 hover:duration-1000 relative xs:w-[300px]"
+          className=" group text-secondarytext hover:translate-2 hover:duration-1000 relative 2xs:w-[220px]  xs:w-[300px]"
         >
-          <div className="flex md:flex-row xs:inline">
-            <div className="mr-2">
+          <div className="flex md:flex-row 2xs:inline">
+            <div className="mr-2 2xs:w-12 xs:w-full">
               <Image src={item.icon} alt={`${item.title} Icon`} />
             </div>
             <div>
-              <p className="text-[22px] align-top uppercase font-bold text-header tracking-[0.2em] mb-5">
+              <p className="xs:text-[22px] 2xs:text-[18px] align-top uppercase font-bold text-header tracking-[0.2em] mb-5">
                 {item.title}
               </p>
-              <p className="text-secondarytext xs:w-full sm:w-[400px]  lg:w-[350px] text-[16px]">
+              <p className="text-secondarytext 2xs:w-full sm:w-[400px]  lg:w-[350px] xs:text-[16px] 2xs:text-[12px]">
                 {item.desc}
               </p>
             </div>
-            <span className="absolute xs:mt-7 left-1/2 h-0.5 xs:w-3/4 sm:w-1/5 bg-secondarytext transition-all duration-500 origin-center transform -translate-x-1/2 group-hover:w-full"></span>
+            <span className="absolute 2xs:mt-7 left-1/2 h-0.5 2xs:w-3/4 sm:w-1/5 bg-secondarytext transition-all duration-500 origin-center transform -translate-x-1/2 group-hover:w-full"></span>
           </div>
         </li>
       ))}
