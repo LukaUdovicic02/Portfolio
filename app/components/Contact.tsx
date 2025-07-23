@@ -46,10 +46,12 @@ function Contact() {
   return (
     <div
       id="contact"
-      className="max-w-[1350px] mx-auto 2xs:w-full h-screen 2xs:p-8 sm:p-12 md:p-14 flex flex-col 2xs:gap-10 xs:gap-13 sm:gap-15 items-center relative"
+      className="max-w-[1350px] mx-auto 2xs:w-full h-screen 2xs:p-8 sm:p-12 md:p-14 
+      flex flex-col 2xs:gap-10 xs:gap-13 sm:gap-15 items-center relative"
     >
       <div
-        className="bg-[url(/images/backgroundHomePage.png)] bg-no-repeat 2xs:bg-[position:0px_150px] 2xs:bg-[length:115%_60%]
+        className="bg-[url(/images/backgroundHomePage.png)] bg-no-repeat 2xs:bg-[position:0px_150px]
+         2xs:bg-[length:115%_60%]
                     -z-1 opacity-100 absolute inset-0"
       ></div>
       <p
@@ -69,9 +71,9 @@ function Contact() {
 
       <form
         onSubmit={onSubmit}
-        className="flex flex-col md:w-[600px]  2xs:w-full relative "
+        className="flex flex-col md:w-[600px]   2xs:w-full relative "
       >
-        <div className="relative xs:mb-15 2xs:mb-5">
+        <div className="relative xs:mb-13 sm:mb-15 2xs:mb-5">
           <input
             type="text"
             value={name}
@@ -82,7 +84,7 @@ function Contact() {
           />
           <span className="bg-secondarytext absolute bottom-0 h-1 w-full left-0"></span>
         </div>
-        <div className="relative xs:mb-15 2xs:mb-5">
+        <div className="relative xs:mb-13 sm:mb-15 2xs:mb-5">
           <input
             type="email"
             required
@@ -93,7 +95,7 @@ function Contact() {
           />
           <span className="bg-secondarytext absolute bottom-0 h-1 w-full left-0"></span>
         </div>
-        <div className="relative xs:mb-15 2xs:mb-5">
+        <div className="relative xs:mb-13 sm:mb-15 2xs:mb-5">
           <input
             type="text"
             value={phonenumber}
@@ -103,15 +105,15 @@ function Contact() {
           />
           <span className="bg-secondarytext absolute bottom-0 h-1 w-full left-0"></span>
         </div>
-        <div className="relative xs:mb-15 2xs:mb-5">
+        <div className="relative xs:mb-13 sm:mb-15 2xs:mb-5">
           <textarea
             placeholder="ENTER YOUR MESSAGE*"
             required
             value={message}
             onChange={(e) => setMsg(e.target.value)}
             className="w-full px-4 bg-transparent text-primarytext placeholder-secondarytext xs:text-lg 
-            resize-none pb-2 focus:outline-none"
-            rows={windowWidth && windowWidth <= 384 ? 3 : 4}
+            resize-none pb-2 focus:outline-none "
+            rows={windowWidth && windowWidth <= 768 ? 3 : 4}
           />
           <span className="bg-secondarytext absolute bottom-0 h-1 w-full left-0"></span>
         </div>
