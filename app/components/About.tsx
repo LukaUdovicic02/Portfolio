@@ -6,7 +6,8 @@ const About = () => {
   return (
     <div
       id="about"
-      className=" 2xs:w-full mx-auto max-w-[1440px] h-screen 2xs:p-8 sm:p-14 flex flex-col justify-center items-center relative"
+      className=" 2xs:w-full mx-auto max-w-[1440px] h-screen 2xs:p-8 sm:p-14 flex flex-col 
+      justify-center items-center relative"
     >
       <div
         className="absolute inset-0 bg-[url(/images/backgroundHomePage.png)] 

@@ -42,8 +42,8 @@ function CustomCarousel({ projects }: Props) {
   const visibleProjects = projects.slice(current, current + visible);
 
   return (
-    <div className="w-full flex flex-col items-center relative ">
-      <div className="flex justify-between w-full px-4 mb-4 xl:hidden">
+    <div className="w-full flex flex-col items-center relative flex-4/5 ">
+      <div className="flex justify-between w-full px-4  xl:hidden">
         <button
           onClick={prevSlide}
           className="2xs:backdrop-blur-sm 2xs:absolute 2xs:left-0 
