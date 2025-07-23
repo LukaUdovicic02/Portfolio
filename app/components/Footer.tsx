@@ -1,4 +1,4 @@
-import Link from "next/link";
+
 import React from "react";
 import EmailIcon from "@/public/images/icon-email.png";
 import LinkedInIcon from "@/public/images/icon-linkedin.png";
@@ -7,9 +7,9 @@ import PhoneIcon from "@/public/images/icon-phone.png";
 
 import Image from "next/image";
 
-type Props = {};
 
-const Footer = (props: Props) => {
+
+const Footer = () => {
   return (
     <div className="max-w-[1350px] mx-auto xs:w-full h-[426px] xs:p-8 sm:p-14 flex flex-col gap-10 items-center relative  ">
       <div

@@ -1,26 +1,6 @@
 "use client";
 
 import React from "react";
-import Arrow from "@/public/images/Arrow.png";
-
-import Image from "next/image";
-import Link from "next/link";
-
-import ReactIcon from "@/public/images/icon-react.png";
-import TailwindIcon from "@/public/images/icon-tailwind.png";
-import NetIcon from "@/public/images/icon-net.png";
-import TsIcon from "@/public/images/icon-ts.png";
-import AzureIcon from "@/public/images/icon-azure.png";
-import JavaIcon from "@/public/images/icon-java.png";
-import GitIcon from "@/public/images/icon-git.png";
-import GitHubIcon from "@/public/images/icon-github.png";
-import UnityIcon from "@/public/images/icon-unity.png";
-import AwsIcon from "@/public/images/icon-aws.png";
-import AndroidIcon from "@/public/images/icon-android.png";
-import DbIcon from "@/public/images/icon-db.png";
-import DineEaseBG from "@/public/images/DineEaseBG.png";
-import VRCS from "@/public/images/VRCS.png";
-import SmartGym from "@/public/images/smartGym.png";
 import CustomCarousel from "./CustomCarousel";
 import { projectData } from "../data/projectData";
 
@@ -49,4 +29,3 @@ const Projects = () => {
 };
 
 export default Projects;
-

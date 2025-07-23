@@ -4,7 +4,6 @@ import NetIcon from "@/public/images/icon-net.png";
 import TsIcon from "@/public/images/icon-ts.png";
 import AzureIcon from "@/public/images/icon-azure.png";
 import JavaIcon from "@/public/images/icon-java.png";
-import GitIcon from "@/public/images/icon-git.png";
 import GitHubIcon from "@/public/images/icon-github.png";
 import UnityIcon from "@/public/images/icon-unity.png";
 import AwsIcon from "@/public/images/icon-aws.png";

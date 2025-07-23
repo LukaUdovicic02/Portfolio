@@ -1,6 +1,5 @@
 import Image from "next/image";
 import slika from "@/public/images/Luka_Slika.png";
-import Link from "next/link";
 import EmailIcon from "@/public/images/icon-email.png";
 import LinkedInIcon from "@/public/images/icon-linkedin.png";
 import GithubIcon from "@/public/images/icon-github.png";
@@ -14,9 +13,8 @@ import GitIcon from "@/public/images/icon-git.png";
 import DockerIcon from "@/public/images/icon-docker.png";
 import NavBar from "./NavBar";
 
-type Props = {};
 
-const Home = (props: Props) => {
+const Home = () => {
   return (
     <div
       id="home"

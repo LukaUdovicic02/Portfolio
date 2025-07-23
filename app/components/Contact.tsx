@@ -1,11 +1,7 @@
 "use client";
-
 import React, { useState } from "react";
-import { POST } from "../api/send/route";
 
-type Props = {};
-
-function Contact({}: Props) {
+function Contact() {
   const [name, setName] = useState<string>("");
   const [phonenumber, setPhone] = useState<string>("");
   const [email, setEmail] = useState<string>("");
@@ -54,7 +50,7 @@ function Contact({}: Props) {
       </p>
       <p className="text-secondarytext xs:w-full xs:h-[150px] sm:text-xl xs:text-[17px] align-top md:w-[764px] sm:h-[200px] text-center tracking-[0.2em]">
         You can reach out using the form below or connect with me through one of
-        the platforms. I'll get back to you as soon as possible!
+        the platforms. I&apos;ll get back to you as soon as possible!
       </p>
 
       <form

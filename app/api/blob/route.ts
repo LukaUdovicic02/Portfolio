@@ -1,5 +1,3 @@
-import { NextResponse } from "next/server";
-
 export async function GET() {
   const blobUrl =
     "https://mreimagestorage.blob.core.windows.net/imagecontainer/CV.pdf";

@@ -2,16 +2,12 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
-import navbarIcon from "@/public/images/navbarIcon.png";
 
-type Props = {};
-
-const NavBar = (props: Props) => {
+const NavBar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const Open = () => {
     setIsOpen((prev) => !prev);
-    
   };
 
   return (

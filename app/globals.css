@@ -32,6 +32,24 @@
   animation: soft-blink 3s ease-in-out infinite;
 }
 
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+}
+@media (min-width: 1024px) {
+  .animate-blink {
+    animation: none !important;
+  }
+}
+
+.animate-blink {
+  animation: blink 5s ease-in-out infinite;
+}
+
 .animated-gradient {
   color: linear-gradient(from left, to right, #7c2d12, #facc15, #7c2d12);
   background-size: 200% auto;

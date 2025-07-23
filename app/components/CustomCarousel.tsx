@@ -42,24 +42,28 @@ function CustomCarousel({ projects }: Props) {
   const visibleProjects = projects.slice(current, current + visible);
 
   return (
-    <div className="w-full flex flex-col items-center relative">
+    <div className="w-full flex flex-col items-center relative ">
       <div className="flex justify-between w-full px-4 mb-4 xl:hidden">
         <button
           onClick={prevSlide}
-          className="sm:absolute sm:left-0 sm:bottom-[45%] w-10 h-10 flex justify-center border-1 border-secondarytext cursor-pointer hover:bg-secondarytext hover:text-primarytext items-center rounded-full text-white text-lg font-bold"
+          className="xs:backdrop-blur-sm xs:absolute xs:left-0 
+          xs:bottom-2 sm:left-0 sm:bottom-[45%] w-12 h-12 flex justify-center border-1
+           border-header cursor-pointer hover:text-2xl hover:text-header 
+           items-center rounded-full text-white text-lg font-bold"
         >
-          ←
+          <span className="-mt-[2px]">←</span>
         </button>
 
         <button
           onClick={nextSlide}
-          className="sm:absolute sm:right-0 sm:bottom-[45%] w-10 h-10 flex border-1 border-secondarytext justify-center cursor-pointer hover:bg-secondarytext hover:text-primarytext items-center rounded-full text-white text-lg font-bold"
+          className="xs:backdrop-blur-sm xs:absolute xs:right-0 xs:bottom-2 sm:right-0 sm:bottom-[45%] w-12 h-12 flex border-1 border-header justify-center cursor-pointer hover:text-2xl 
+           hover:text-header items-center rounded-full text-white text-lg font-bold"
         >
-          →
+          <span className="-mt-[2px]">→</span>
         </button>
       </div>
 
-      <div className="flex gap-6 justify-center flex-wrap md:flex-nowrap">
+      <div className="flex gap-6 justify-center flex-wrap md:flex-nowrap transition-transform duration-500 ease-in-out">
         {visibleProjects.map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}
@@ -103,4 +107,5 @@ const ProjectCard = ({ project }: { project: Project }) => {
     </div>
   );
 };
+
 export default CustomCarousel;
