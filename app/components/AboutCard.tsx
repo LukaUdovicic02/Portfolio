@@ -45,7 +45,7 @@ function AboutCard({ About }: Props) {
   );
 
   return (
-    <ul className="animate-blink grid sm:grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 xl:gap-25">
+    <ul className="animate-blink grid sm:grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 xl:gap-25 xs:mb-10 sm:mt-6 md:mt-0">
       {visibleItems.map((item, index) => (
         <li
           key={index}
