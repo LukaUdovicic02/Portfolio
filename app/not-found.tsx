@@ -23,7 +23,7 @@ export default function NotFound() {
 
       <div className="flex flex-col gap-8 items-center relative">
         <h1 className="2xs:text-lg xs:text-xl md:text-2x xl:text-3xl">
-          Sorry... That page doesn't exist
+          Sorry... That page doesn&apos;t exist
         </h1>
         <Link
           href={"/"}
