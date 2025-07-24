@@ -42,7 +42,7 @@ function CustomCarousel({ projects }: Props) {
   const visibleProjects = projects.slice(current, current + visible);
 
   return (
-    <div className="w-full flex flex-col items-center relative ">
+    <div className="w-full flex flex-col items-center relative sm:mt-15">
       <div className="xl:hidden">
         <button
           onClick={prevSlide}

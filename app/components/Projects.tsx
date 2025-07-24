@@ -19,9 +19,9 @@ const Projects = () => {
       ></div>
       <p
         className="flex uppercase 2xs:text-lg xs:text-xl 2xs:tracking-[0.05em] xs:tracking-[0.35em] 
-                  sm:text-3xl font-bold sm:tracking-[0.45em] xs:
+                  sm:text-3xl font-bold sm:tracking-[0.45em] 
                   justify-center items-center text-transparent bg-clip-text bg-linear-to-r
-                 from-orange-950  via-yellow-600 to-orange-950 animated-gradient"
+                 from-orange-950  via-yellow-600 to-orange-950 animated-gradient sm:mt-20"
       >
         notable projects
       </p>
