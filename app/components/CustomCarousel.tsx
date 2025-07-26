@@ -42,13 +42,13 @@ function CustomCarousel({ projects }: Props) {
   const visibleProjects = projects.slice(current, current + visible);
 
   return (
-    <div className="w-full flex flex-col items-center relative sm:mt-15">
+    <div className="w-full flex flex-col items-center relative sm:mt-15 ">
       <div className="xl:hidden">
         <button
           onClick={prevSlide}
           className="absolute left-[-30px] top-1/2 transform -translate-y-1/2 w-12 h-12 
           flex justify-center items-center border-1 border-header text-white text-lg font-bold 
-         cursor-pointer hover:text-2xl hover:text-header rounded-full backdrop-blur-sm"
+         cursor-pointer hover:text-2xl hover:text-header rounded-full backdrop-blur-sm z-1"
         >
           <span className="-mt-[2px]">←</span>
         </button>
@@ -57,7 +57,7 @@ function CustomCarousel({ projects }: Props) {
           onClick={nextSlide}
           className="absolute right-[-30px] top-1/2 transform -translate-y-1/2 w-12 h-12 
          flex justify-center items-center border-1 border-header text-white text-lg font-bold 
-         cursor-pointer hover:text-2xl hover:text-header rounded-full backdrop-blur-sm"
+         cursor-pointer hover:text-2xl hover:text-header rounded-full backdrop-blur-sm z-1"
         >
           <span className="-mt-[2px]">→</span>
         </button>
