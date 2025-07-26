@@ -94,7 +94,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="bg-[url(/images/backgroundHomePage.png)] 2xs:mx-auto bg-no-repeat bg-[length:60%_60%] bg-[position:100px] relative">
+          <div className="bg-[url(/images/backgroundHomePage.png)] 2xs:mx-auto bg-no-repeat bg-[length:60%_60%] bg-[position:50px] relative">
             <div className="absolute z-2 bottom-0  2xs:w-full 2xs:h-full bg-gradient-to-bl from-blck/0 to-blck"></div>
             <div className="absolute bottom-0 md:w-[544px] 2xs:w-full 2xs:h-full z-2 sm:h-[593px] bg-gradient-to-t from-blck/30 to-blck/0"></div>
 
@@ -102,7 +102,7 @@ const Home = () => {
               src={slika}
               alt="profile picture"
               className="object-contain z-1 aboslute lg:w-[400px] lg:h-[500px] 
-              xs:w-full xs:h-full sm:max-w-[550px] sm:max-h-[700px] xl:w-[600px] 2xs:h-[200px] 2xs:w-[200px] "
+              xs:w-[270px] sm:w-full xs:h-full sm:max-w-[550px] sm:max-h-[700px] xl:w-[600px] 2xs:h-[200px] 2xs:w-[200px] "
             />
           </div>
         </div>
