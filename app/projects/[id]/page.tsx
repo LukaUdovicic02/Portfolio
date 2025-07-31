@@ -27,7 +27,7 @@ export default async function ProjectPage({ params }: Props) {
         </h1>
       </div>
 
-      <div className="flex 2xs:flex-col sm:flex-row 2xs:items-center sm:justify-between px-10 2xs:mb-5 md:mb-10 xl:mb-15  max-w-[1350px] mx-auto">
+      <div className="flex 2xs:flex-col 2xs:gap-4 sm:flex-row 2xs:items-center sm:justify-between px-10 2xs:mb-5 md:mb-10 xl:mb-15  max-w-[1350px] mx-auto">
         <div>
           <p
             className="text-transparent bg-linear-to-r from-orange-900  via-yellow-600 to-orange-900 
