@@ -1,4 +1,3 @@
-
 import { projectData } from "@/app/data/projectData";
 import { notFound } from "next/navigation";
 
@@ -7,12 +6,12 @@ import GridPattern from "@/public/images/grid-pattern.png";
 import Image from "next/image";
 import React from "react";
 
-type Props = {
+export default async function ProjectPage({
+  params,
+}: {
   params: { id: string };
-};
-
-export default async function ProjectPage({ params }: Props) {
-  const { id } = params;
+}) {
+  const { id } = await params;
   const project = projectData().find((p) => p.id === id);
 
   if (!project) return notFound();
