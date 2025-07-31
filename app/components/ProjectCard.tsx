@@ -15,13 +15,13 @@ export const ProjectCard = ({ project }: { project: Project }) => {
                  hover:shadow-[0_4px_20px_#9C4500] hover:rotate-[-1deg] hover:scale-105 relative group"
       >
         <div
-          className="xl:hidden group-hover:flex bg-blck/50 absolute w-full text-lg font-bold mx-auto h-1/3 text-primarytext 
-                        z-0 left-0 top-0 rounded-2xl backdrop-blur-sm shadow-2xl 
+          className="xl:hidden group-hover:flex bg-blck/50 absolute xl:w-full text-lg font-bold mx-auto xl:h-full text-primarytext 
+                        z-0 2xs:left-5 xl:left-0 2xs:top-2 2xs:w-9/10 xl:top-0 rounded-2xl backdrop-blur-sm shadow-2xl 2xs:h-1/8
                         flex justify-center items-center flex-row gap-2"
         >
           <Link
             href={`projects/${project.id}`}
-            className="flex items-center gap-2"
+            className="flex items-center gap-2 "
           >
             <p>More Details</p>
             <Image src={Arrow} alt="arrow" width={12} height={12} />
