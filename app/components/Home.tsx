@@ -35,24 +35,24 @@ const Home = () => {
           <div className="xl:w-[674px] xl:h-[527px] 2xs:flex 2xs:flex-col lg:items-start 2xs:items-center">
             <div className="2xs:flex 2xs:flex-col 2xs:items-center lg:block">
               <h1 className="text-2xl text-secondarytext mb-2 sm:mt-2">
-                Hi I am
+                Tino reko
               </h1>
               <h1 className="text-3xl text-secondarytext mb-8">
-                Luka Udovicic
+                da igrate it takes two
               </h1>
             </div>
             <div>
               <h1 className="xl:text-7xl lg:text-4xl md:text-5xl sm:text-4xl 2xs:text-xl xs:text-3xl  text-header font-bold 2xs:w-full xl:w-[700px]">
-                Full-Stack{" "}
+                Darko preso{" "}
                 <span
                   className="blinking-letter bg-linear-to-r text-transparent bg-clip-text
                            from-orange-900  via-yellow-600 to-orange-900"
                 >
-                  Software
+                  na
                 </span>
               </h1>
               <h1 className="xl:text-7xl lg:text-4xl md:text-5xl sm:text-4xl 2xs:text-xl xs:text-3xl text-header font-bold 2xs:w-full xl:w-[700px]">
-                Engineer
+                linux
               </h1>
             </div>
             <div>
@@ -83,13 +83,13 @@ const Home = () => {
                 href="https://github.com/LukaUdovicic02"
                 className="font-bold rounded-md sm:py-2 sm:px-8 2xs:py-2 2xs:px-4 2xs:text-[15px] bg-header border-1 border-header transition ease-in-out duration-500 text-primarytext cursor-pointer hover:bg-transparent  hover:border-secondarytext hover:text-secondarytext hover:border-1"
               >
-                GitHub
+                Ubi se
               </a>
               <a
                 href="/api/blob"
                 className="transition ease-in-out duration-500 hover:border-header font-bold rounded-md py-2 2xs:text-[15px] 2xs:px-1 xs:px-9 sm:px-12 border-1 border-secondarytext text-secondarytext cursor-pointer hover:bg-header hover:text-primarytext "
               >
-                Download CV
+                kata + danko
               </a>
             </div>
           </div>
