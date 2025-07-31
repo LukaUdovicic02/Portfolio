@@ -1,3 +1,4 @@
+
 import { projectData } from "@/app/data/projectData";
 import { notFound } from "next/navigation";
 
@@ -11,7 +12,7 @@ type Props = {
 };
 
 export default async function ProjectPage({ params }: Props) {
-  const { id } = await params;
+  const { id } = params;
   const project = projectData().find((p) => p.id === id);
 
   if (!project) return notFound();
