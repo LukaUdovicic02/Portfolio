@@ -6,11 +6,9 @@ import GridPattern from "@/public/images/grid-pattern.png";
 import Image from "next/image";
 import React from "react";
 
-export default async function ProjectPage({
-  params,
-}: {
-  params: { id: string };
-}) {
+type Params = Promise<{ id: string }>
+
+export default async function ProjectPage({ params }: { params: Params }) {
   const { id } = await params;
   const project = projectData().find((p) => p.id === id);
 
