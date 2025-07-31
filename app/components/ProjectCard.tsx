@@ -1,3 +1,4 @@
+"use client";
 import Arrow from "@/public/images/Arrow.png";
 import Image from "next/image";
 import { Project } from "../globalTypes";
@@ -18,7 +19,10 @@ export const ProjectCard = ({ project }: { project: Project }) => {
                         z-0 left-0 top-0 rounded-2xl backdrop-blur-sm shadow-2xl 
                         flex justify-center items-center flex-row gap-2"
         >
-          <Link href={"/"} className="flex items-center gap-2">
+          <Link
+            href={`projects/${project.id}`}
+            className="flex items-center gap-2"
+          >
             <p>More Details</p>
             <Image src={Arrow} alt="arrow" width={12} height={12} />
           </Link>
