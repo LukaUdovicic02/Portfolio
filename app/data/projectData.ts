@@ -47,7 +47,17 @@ export const projectData = () => [
       "Docker",
       "JWT",
     ],
-    technologies: [" Intelij", "VSCode", "Docker", "Astah", "Postman","Git", "Github"],
+    technologies: [
+      " Intelij",
+      "VSCode",
+      "Docker",
+      "Astah",
+      "Postman",
+      "Git",
+      "Github",
+      "Jira",
+      "Trello",
+    ],
     icons: [NetIcon, TailwindIcon, TsIcon, ReactIcon, AzureIcon],
     github: "https://github.com/LukaUdovicic02/BPR2",
     details: [
@@ -212,7 +222,7 @@ export const projectData = () => [
         title: "Authentication - Backend",
         content: `Explains the process of Login in the logic layer.
                   Starting off with the LogicUser method that is validating the user and if the user exists gives it to the GenerateJwt method.
-                  The GenerateJwt method is called to create a list of claims that represent the user’s data.SymmetricSecurityKey is a key that is created using _jwtKey that is taken from the environment variable.The key is used to sign JWT using an algorithm which will ensure the authenticity of the token.JwtHeader contains the signing credentials , specification of the algorithm that is used. Payload contains claims, and additional data. A JwtSecurityToken object is called that will take in the Header and Payload.Then the token is being serialised into the string format using the JwtSecurityTokenHandler().WriteToken which returns the final JWT token.
+                  The GenerateJwt method is called to create a list of claims that represent the user's data.SymmetricSecurityKey is a key that is created using _jwtKey that is taken from the environment variable.The key is used to sign JWT using an algorithm which will ensure the authenticity of the token.JwtHeader contains the signing credentials , specification of the algorithm that is used. Payload contains claims, and additional data. A JwtSecurityToken object is called that will take in the Header and Payload.Then the token is being serialised into the string format using the JwtSecurityTokenHandler().WriteToken which returns the final JWT token.
                   GenerateClaims method generates the claims about the user and some additional data and returns it as a list.
                  `,
         images: [IImage2],
@@ -241,10 +251,42 @@ export const projectData = () => [
   {
     id: "2",
     title: "CS 1.6 VR - VR School Project",
+    skills: [".NET C#", "Unity"],
+    technologies: ["Intelij", "Unity", "Git", "GitHub"],
     desc: " CS 1.6 in VR with Dust2, an AK-47, and core movement. Features original sounds, full map access, and a detachable magazine.",
     image: VRCS,
     icons: [UnityIcon, NetIcon, GitHubIcon],
     github: "https://github.com/XRD-Group-11/VR-CS-1.6",
+    details: [
+      {
+        title: "Idea",
+        content: `We came up with the idea of converting CS 1.6 into a VR game. With that said, CS 1.6 is not such a easy game that we could easily recreate in VR under the time constraints, so we will be doing a demo version that is:
+        - Offline.
+        - 1 Map Only (Dust2);
+        - 1 Gun Only (AK-47);
+        - Movement Mechanics (Jumping, Shift and Crouching)
+        - Basically gathering the assets from internet , for different sounds for example : walking , making an kill streak , gun sounds and found a map to play on. 
+        `,
+      },
+
+      {
+        title: "Assets",
+        content: `We have decided to use the original textures, sounds and models from the original game. This task might sound easy since we can just go to game files and copy the assets, but the original game uses specific file extensions. In the end we have found the de_dust2 map on the internet in .obj format with all of the textures. The sounds we have pulled from the original game files and the gun model we have converted from .mdl to .fbx using a blender plugin.`,
+      },
+      {
+        title: "Implementation",
+        content: `When it comes to implementation, for now. The Dust2 map is integrated along with AK-47, it is possible to move around the map and that is about it. Also, we have modeled the AK-47 to have a detachable magazine inside the blender.`,
+      },
+      {
+        title: "Requirements",
+        content: `- move around de_dust2 \n\n-Shooting mechanic \n\n- -Holding a gun in the hand \n\n- -Fire a bullet \n\n- -Reload \n\n- -Recoil \n\n- -Charging handle \n\n-Throwing a HE grenade \n\n-Sound effects \n\n-extra features \n\n- -Particle effects \n\n- -Physical objects that respond to grenade explosions and being shot \n\n- -AI bots \n\n- -Health \n\n- -Damage \n\n- -Ammo \n\n
+        `,
+      },
+      {
+        title: "Video",
+        content: "https://www.youtube.com/watch?v=uEUrcwIZw-Q",
+      },
+    ],
   },
   {
     id: "3",

@@ -5,8 +5,14 @@ import background from "@/public/images/background.png";
 import GridPattern from "@/public/images/grid-pattern.png";
 import Image from "next/image";
 import React from "react";
+import Link from "next/link";
+import fs from "fs";
+import path from "path";
+import { MDXRemote } from "next-mdx-remote-client/rsc";
+import { serialize } from "next-mdx-remote/serialize";
+import { mdxComponents } from "@/app/components/mdxComponents";
 
-type Params = Promise<{ id: string }>
+type Params = Promise<{ id: string }>;
 
 export default async function ProjectPage({ params }: { params: Params }) {
   const { id } = await params;
@@ -14,15 +20,47 @@ export default async function ProjectPage({ params }: { params: Params }) {
 
   if (!project) return notFound();
 
+
+  const filePath = path.join(
+    process.cwd(),
+    `content/projects/${id}/content.mdx`
+  );
+
+
+  const content = fs.readFileSync(filePath, "utf-8");
+
+  const sourceMdx = await serialize(content);
+
   return (
     <div className="relative w-full min-h-screen overflow-x-hidden 2xs:p-2 xs:p-4 sm:p-6 md:p-8 lg:p-10">
-      <div className="flex justify-center items-center">
+      <Image
+        src={background}
+        alt="background"
+        fill
+        className="absolute -z-20 object-cover"
+      />
+      <Image
+        src={GridPattern}
+        alt="grid"
+        fill
+        className="absolute -z-10 object-cover"
+      />
+
+      <div className="flex justify-between items-center max-w-[1350px] mx-auto mb-12">
         <h1
-          className="bg-clip-text bg-linear-to-r text-transparent mb-4 from-orange-900  via-yellow-600 to-orange-900 
-              animated-gradient 2xs:text-lg sm:text-2xl lg:text-3xl 2xs:tracking-[0.25em] md:tracking-[0.45em] font-bold uppercase "
+          className="bg-clip-text bg-linear-to-r text-transparent  from-orange-900  via-yellow-600 to-orange-900 
+              animated-gradient 2xs:text-lg sm:text-2xl lg:text-3xl 2xs:tracking-[0.25em] md:tracking-[0.35em] font-bold uppercase "
         >
           {project.title}
         </h1>
+        <Link
+          className="font-bold rounded-md mt-1 2xs:py-1 2xs:px-3 2xs:text-[12px]
+             bg-header border-1 border-header transition ease-in-out duration-500 text-primarytext 
+              hover:border-secondarytext hover:text-secondarytext hover:border-1 hover:bg-transparent"
+          href={"/"}
+        >
+          HOME
+        </Link>
       </div>
 
       <div className="flex 2xs:flex-col 2xs:gap-4 sm:flex-row 2xs:items-center sm:justify-between px-10 2xs:mb-5 md:mb-10 xl:mb-15  max-w-[1350px] mx-auto">
@@ -72,59 +110,8 @@ export default async function ProjectPage({ params }: { params: Params }) {
         </div>
       </div>
 
-      <Image
-        src={background}
-        alt="background"
-        fill
-        className="absolute -z-20 object-cover"
-      />
-      <Image
-        src={GridPattern}
-        alt="grid"
-        fill
-        className="absolute -z-10 object-cover"
-      />
-
-      <div className="max-w-[1350px] mx-auto">
-        {project.details?.map((item, Idx) => {
-          return (
-            <div key={Idx} className="flex flex-col gap-5 items-center">
-              <h1
-                className="bg-clip-text bg-linear-to-r text-transparent mb-4 from-orange-900  via-yellow-600 to-orange-900 
-              animated-gradient 2xs:text-xl sm:text-2xl lg:text-3xl 2xs:tracking-[0.35em] md:tracking-[0.45em] font-bold uppercase "
-              >
-                {item.title}
-              </h1>
-              {item.images &&
-                item.images.map((image, i) => {
-                  return (
-                    <div key={i} className="mb-2">
-                      <Image src={image} alt="architecture image" />
-                    </div>
-                  );
-                })}
-
-              <div className="2xs:text-[13px] sm:text-[14px] lg:text-[16px] text-secondarytext ">
-                {item.content.split("\n\n").map((para, idx) => {
-                  const parts = para.split(/["“”]/);
-                  return (
-                    <p key={idx} className="mb-4">
-                      {parts.map((part, i) =>
-                        i % 2 === 1 ? (
-                          <span key={i} className="italic">
-                            “{part}”
-                          </span>
-                        ) : (
-                          <span key={i}>{part}</span>
-                        )
-                      )}
-                    </p>
-                  );
-                })}
-              </div>
-            </div>
-          );
-        })}
+      <div className="max-w-[1350px] text-primarytext mx-auto">
+        <MDXRemote source={content} components={mdxComponents}/>
       </div>
     </div>
   );
