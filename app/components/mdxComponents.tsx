@@ -5,11 +5,11 @@ import Image from "next/image";
 
 export const mdxComponents = {
   h1: (props: any) => (
-    <h1 className="text-3xl font-bold text-orange-700 mt-10 mb-4" {...props} />
+    <h1 className="text-3xl font-bold text-orange-700 mt-10 mb-4 " {...props} />
   ),
   h2: (props: any) => (
     <h2
-      className="text-2xl font-semibold text-yellow-600 mt-8 mb-3 "
+      className="text-2xl font-semibold text-yellow-600 mt-8 mb-3 flex items-center justify-center "
       {...props}
     />
   ),

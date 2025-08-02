@@ -12,8 +12,8 @@ recommendations from friends, or simply walking in without prior knowledge (Smit
 Johnson, 2021). This fragmented approach not only lacks convenience but also makes the
 overall dining experience worse
 Moreover, with the increasing tend of urbanization and globalization, people are frequently
-traveling to different cities fr work or leisure. *By 2050 more than two-thirds of the world's
-population is projected to be lving in urban areas* (Palanivel, 2017).
+traveling to different cities fr work or leisure. _By 2050 more than two-thirds of the world's
+population is projected to be lving in urban areas_ (Palanivel, 2017).
 
 This urban growth has been accopanied by a significant increase in inernational tourism,
 with the number of internationa trips more than doubling since the strt of the millennium
@@ -24,19 +24,19 @@ can be frustrating, especially hen unfamiliar with the local dining cisine (Trav
 It's o secret that nowadays mot luxurious restaurants are using somekind of booking
 syste, which can help clients et a reservation upfront and securely.A booking system
 must e a reliable and easy-to-se system so that anyone can utilize i without the need for
-extenive guidance. *Most moder restaurants work with reservation sofware. People can
+extenive guidance. _Most moder restaurants work with reservation sofware. People can
 easil view and book available ables online or via an app, and the't eed to call to
 modify or cancel their reservaton. (Smaddalena, 2024).
 Whether a guet is inspired by a
 food ost on Instagram, explorig options on Googl
-Maps,or browsing a restaurant' website, they can act on that impulseimmediately.*
+Maps,or browsing a restaurant' website, they can act on that impulseimmediately._
 (Tablin Team, 2024)
 In the restaurant business customer satisfaction is a priority, making it easier and enjoyable
 for the customers to find out more about the place and book a stay, which leads to less effort
-and errors for the restaurant management. *Until the late 1990s, all reservations were taken
+and errors for the restaurant management. _Until the late 1990s, all reservations were taken
 over the phone and manually recorded in a reservation log. Guests dealt with busy signals,
 double-booked tables, and transcription errors. In spite of these issues, some restaurants
-still do it this way.* (Smaddalena, 2024).
+still do it this way._ (Smaddalena, 2024).
 
 For restaurants, the inefficiencies in reservation management can lead to lost revenue and
 decreased customer satisfaction. During peak hours, traditional reservation methods may
@@ -51,11 +51,11 @@ to the customers, as it is not the most efficient way to reserve a place. Lack o
 availability or booking for days ahead can bring many challenges for both clients and
 restaurant management (Plazn, 2023). This also includes more waiting time, and difficulty in
 finding available slots, and in the end, it could end up messing up the appointments. As of
-today, several websites are used across the world to book a table such as *OpenTable* or
-*Dinnerbooking*. For example, OpenTable, a popular reservation platform, lists only around
+today, several websites are used across the world to book a table such as _OpenTable_ or
+_Dinnerbooking_. For example, OpenTable, a popular reservation platform, lists only around
 13 restaurants in Denmark, suggesting that many venues in the country may not utilize such
-services (opentable, 2024). In Denmark, the most used are *earlybird* and
-*easyTableBooking*.
+services (opentable, 2024). In Denmark, the most used are _earlybird_ and
+_easyTableBooking_.
 
 The existing solutions in the market, such as standalone restaurant reservation platforms or
 review websites, fail to address these challenges comprehensively. They often lack
@@ -128,15 +128,15 @@ By applying the **Clean** Architecture to the backend, it ensures that the key p
 
 ![ Implementation image ](/images/I-Image.png)
 
-Shows an Auth useState hook initialises the auth state by taking the JWT token from localStorage. setAuth function checks if the user is authenticated by checking if the token exists and if it exists then the user is authenticated and role and id are extracted from the token and set for the user useState. If the auth is false then it will clear the user useState , remove the token from the localStorage and reset the authentication.
+Shows an Auth useState hook initialises the auth state by taking the **JWT token** from localStorage. setAuth function checks if the user is authenticated by checking if the token exists and if it exists then the user is authenticated and role and id are extracted from the token and set for the user useState. If the auth is false then it will clear the user useState , remove the token from the localStorage and reset the authentication.
 
 ## Authentication - Backend
 
 ![ Implementation image 2 ](/images/I-Image2.png)
 
-Explains the process of Login in the logic layer.
+Explains the process of Login in the **logic** layer.
 Starting off with the LogicUser method that is validating the user and if the user exists gives it to the GenerateJwt method.
-The GenerateJwt method is called to create a list of claims that represent the user's data.SymmetricSecurityKey is a key that is created using \_jwtKey that is taken from the environment variable.The key is used to sign JWT using an algorithm which will ensure the authenticity of the token.JwtHeader contains the signing credentials , specification of the algorithm that is used. Payload contains claims, and additional data. A JwtSecurityToken object is called that will take in the Header and Payload.Then the token is being serialised into the string format using the JwtSecurityTokenHandler().WriteToken which returns the final JWT token.GenerateClaims method generates the claims about the user and some additional data and returns it as a list.
+The GenerateJwt method is called to create a list of claims that represent the user's data.SymmetricSecurityKey is a key that is created using \_jwtKey that is taken from the environment variable.The key is used to sign **JWT** using an algorithm which will ensure the authenticity of the token.JwtHeader contains the signing credentials , specification of the algorithm that is used. Payload contains claims, and additional data. A JwtSecurityToken object is called that will take in the Header and Payload.Then the token is being serialised into the string format using the JwtSecurityTokenHandler().WriteToken which returns the final **JWT** token.GenerateClaims method generates the claims about the user and some additional data and returns it as a list.
 
 ## Update reservation - Frontend
 
