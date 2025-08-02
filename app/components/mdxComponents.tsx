@@ -4,6 +4,18 @@ import Image from "next/image";
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export const mdxComponents = {
+  code: (props: any) => (
+    <code
+      {...props}
+      className="bg-neutral-700 text-white px-2 py-1 rounded text-sm"
+    />
+  ),
+  pre: (props: any) => (
+    <pre
+      {...props}
+      className="bg-neutral-900 text-white p-4 my-4 rounded-xl overflow-x-auto text-sm leading-relaxed"
+    />
+  ),
   h1: (props: any) => (
     <h1 className="text-3xl font-bold text-orange-700 mt-10 mb-4 " {...props} />
   ),
@@ -58,6 +70,12 @@ export const mdxComponents = {
       );
     }
 
-    return <Image {...props} alt={props.alt} className="mx-auto my-6 rounded-lg shadow-md" />;
+    return (
+      <Image
+        {...props}
+        alt={props.alt}
+        className="mx-auto my-6 rounded-lg shadow-md"
+      />
+    );
   },
 };

@@ -1,0 +1,287 @@
+## Introduction
+
+The word _“gym”_ is derived from the ancient Greek _“gymnasium”_, which formerly
+represented a training facility for competitors in public games. In addition, it was also a
+place for socialising and engaging in intellectual spirits. It remains a place where people
+exercise and socialise. Furthermore, gyms are becoming increasingly popular these days
+among people of all ages. 17% of the gyms were closed, and 44% of gym employees lost
+their jobs during the pandemic around the world. Despite this, the gym industry is
+recovering and growing bigger. As of 2020, the global gym industry is worth $96.7
+billion. _Also, the gym industry in the U.S faced a 7.2% growth rate in 2021._
+(runrepeat.com, 2021)
+
+_While the growth in the Gym industry is perfect for businesses and its customers,
+not all gyms have proper equipment to maintain recommended air quality: CO2_
+(semanticscholar.org, 1970), _humidity and temperature in premises_ (smartfog.com,
+2017). Said recommended levels can be found in Project description in Appendix
+Contracts and Project Description.
+
+The completed project is relevant for the Gym industry as it aims to automate
+gyms to improve the air quality. As a bonus, it prevents lights from consuming electricity
+more than necessary. The solution is not made to work with smart devices like lights,
+windows, or conditioners.
+
+The following chapters will explain:
+
+- **Analysis** - the project scope.
+- **Design** - the architecture, design patterns and principles.
+- **Implementation** - explain parts of the code.
+- **Tests** - methods used for testing.
+- **Results and discussion** - outcome and achieved results of the project.
+
+## Analysis
+
+The idea of the project is to create a system that will give the possibility to
+monitor the CO2, humidity and temperature levels in the gym, as well as making it
+possible to influence them by e.g. opening the windows. It will also include a motion
+sensor, which will help to save electricity by controlling the lights in the gym.
+The Analysis section consists of the following parts: **Requirements**, **Use Case diagram**,
+one **use case description** and **Domain model**. The analysis does not contain any activity
+diagrams, as it was decided that use cases are not complicated enough.
+
+## Requirements
+
+### Functional Requirements
+
+1. As a **gym employee**, I would like to have the data (humidity, CO2, temperature,
+   window state) visualised, so that I can efficiently and easily manage them.
+2. As a **gym employee**, I would like to control the room temperature
+   (open windows) according to the
+   temperature data so that I can provide a good experience to customers.
+3. As a **gym employee**, I would like the windows to open when the level of humidity
+   or CO2 reaches a certain point, such that I can automate the gym.
+4. As a **gym employee** I would like to automatically turn off the
+   light when no one occupies the gym so that I can save energy.
+5. As a **gym employee** I would like the light to turn on automatically
+   when a person enters the room, to improve the workout experience of the customers.
+6. As a **gym employee**, I would like to be able to view the data for
+   previous days and time of day(1d,7d,1m,1y,from the oldest date),
+   so that I can see a history of the data.
+7. As a **gym employee**, I would like to be able to create an account,
+   such that I can use the system.
+8. As a **gym employee**, I would like to be able to login, such that I would be identified and
+   authorised.
+9. As a **gym employee**, I want to be able to know which devices (sensors) are online and
+   working, so that I know if something needs maintenance.
+10. As a **gym employee**, I would like to be able to receive notifications, so that I can see
+    when one of the sensors reaches a high value.
+11. As an **administrator**, I would like to see which gym employees are registered, so that I
+    can see who is using the application.
+12. As an **administrator**, I would like to be able to register gym employees, so that more
+    gym employees can use the system.
+13. As an **administrator**, I would like to see how many people are logged in, so that I
+    know that someone is currently monitoring the data.
+14. As an **administrator**, I would like to be able to change account details, so that I can
+    edit the gym employees credentials.
+15. As an **administrator**, I would like to be able to delete accounts, so that I can remove
+    gym employees from the system.
+16. As a **gym employee**, I would like to know the worst spot in the gym based on
+    humidity and CO2 level so that I can make changes according to that.
+17. As a **gym employee**, I would like to be able to know what time of day the windows
+    are open, so that I could better manage indoor temperature.
+
+### Non-Functional Requirements
+
+18. The application will only be available on the minimum version of Android 7.0 and
+    target version 12.0.
+19. The system language is in English only.
+
+## Domain Model
+
+![ Domain model 3](/images/DomainModel3.png)
+
+There are three types of data that are going to be processed. The data is going to
+be retrieved from three different types of sensors: **temperature sensor**, **humidity sensor**,
+**carbon dioxide sensor**. The motion sensor data will not be saved or presented to the user.
+All Data contains the measurement of its kind and an id representing a specific
+measurement. All three kinds of data are connected and sent to the user through the
+SensorsData.
+It will be possible to monitor and change temperature by opening the windows in
+the gym. For that purpose there is an **RCServo** component that has two possible positions
+and is connected to the window, which makes it possible to change window’s state from
+closed to opened and vice versa.
+The **User** is able to view data that comes from the sensors as well as control the
+**RCServo** to open or close the window depending on the data that they receive. It is
+possible for the **User** to be **Administrator** as well as a simple employee of the gym.
+**SmartGymDevice** is the hardware that connects all the sensors and transmits or receives
+the data from the user.
+
+## System Architecture
+
+![ Domain model 3](/images/SystemArchitecture3.png)
+
+The purpose of the design is to show the programmer what classes the project
+contains, system architecture, design patterns and principles used.
+
+Image above shows the architecture and communication between different
+system parts. Hardware is split into four parts. Sensors are responsible for measuring the
+data, and configuration controls the application behaviour. Application layer commands
+the rest of the hardware, telling when to start measuring data, changing servo state and
+preparing the package for LoraWAN. It is responsible for sending and receiving packages
+from LoraWAN Gateway every 5 minutes. Data Web API is split into three parts.
+WebSocket, which is responsible for retrieving and saving the data or sending a
+command to the hardware through LoraWAN Gateway. PostgreSQL database, which
+contains data received from sensors and the current window state. It also has a data
+warehouse inside. Rest server gets called to retrieve the latest sensor and window data or
+update the window state using HTTP requests through Retrofit from Android application,
+which splits into four parts. They get called inside the repository, and all data received is
+stored there. If there is any logic required to do it is executed inside ViewModel and
+shown in the UI.
+
+## Implementation
+
+### Saving Data
+
+```
+ public static void sendPost(String apiurl, String payload) {
+        try {
+            URL url = new URL(apiurl);
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("POST");
+            connection.setDoOutput(true);
+            connection.setRequestProperty("Content-Type", "application/json");
+            connection.setRequestProperty("Accept", "application/json");
+            byte[] out = payload.getBytes(StandardCharsets.UTF_8);
+            OutputStream stream = connection.getOutputStream();
+            stream.write(out);
+            System.out.println(connection.getResponseCode());
+            connection.disconnect();
+        } catch (Exception e) {
+            System.out.println(e);
+            System.out.println("Failed");
+        }
+    }
+```
+
+### Recieve and send CO2 Data
+
+```
+ timestamp = new Timestamp(data.getTs()).toLocalDateTime();
+        timestampString = "{\"timestamp\":\"" + timestamp + "\",";
+        timeString ="{\"time\":\"" + timestamp + "\",";
+        if (data.getData() != null) {
+            if (data.getData().length() >= 12) {
+                String hexValCo2 = data.getData().substring(0, 4);
+                co2Level = Integer.parseInt(hexValCo2, 16);
+                co2String = "\"co2Level\":\"" + co2Level + "\"}";
+                String co2AllString = timeString + co2String;
+                sendPost(
+                        "http://sep4v2-env.eba-asbxjuyz.eu-west-1.elasticbeanstalk.com/co2Sensor",
+                        co2AllString);
+```
+
+In the data we receive from LoraWan, the first 4 bits are the CO2 level
+hexadecimal value. After we have converted it to decimal using Java's own
+methods, we will directly call the sendPost method to store the data in Json
+format directly into the database via Endpoint.
+
+### Sending Message
+
+```
+public class ReceiveWindow implements Runnable{
+    @Override
+    public void run() {
+        while (true) {
+            try {
+                String str = getHttpInterface("http://sep4v2-env.eba-asbxjuyz.eu-west-1.elasticbeanstalk.com/windows");
+                if (str.contains("false")) {
+                    WindowStatus.setStatus("00");
+                } else {
+                    WindowStatus.setStatus("64");
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+```
+
+### Get data through URL
+
+```
+public static String getHttpInterface(String path)
+    {
+        BufferedReader in = null;
+        StringBuffer result = null;
+        try
+        {
+            URL url = new URL(path);
+            //open connection with URL
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestProperty("Content-Type",
+                    "application/x-www-form-urlencoded");
+            connection.setRequestProperty("Charset", "utf-8");
+            connection.connect();
+
+            result = new StringBuffer();
+            //read URL response
+            in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+            String line;
+            while ((line = in.readLine()) != null)
+            {
+                result.append(line);
+            }
+            return result.toString();
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                if (in != null)
+                {
+                    in.close();
+                }
+            }
+            catch (Exception e2)
+            {
+                e2.printStackTrace();
+            }
+        }
+        return null;
+    }
+}
+```
+
+## Project future
+
+As can be seen at the moment, the project is missing some of the planned features, so the
+next step would be to implement those. Also, after a while, new features can be
+implemented based on gym employees feedback. In this way the system would become
+more diversified and user friendly.
+
+Regarding IoT, the team can add more devices to manage, for example an AC
+Conditioner for summer time. Regarding winter time an electric heating system can be
+implemented. It could be controlled by a gym employee/administrator from an Android
+application.
+
+Another step for extending the project would be to add more gyms to the system, so
+every gym administrator could add the employee to the system. Also, the gym
+employees, while registering in the system, will be requested to select the gym in which
+they are employed. The administrator will have to accept the request or to deny it, as the
+person that made the request is not part of that specific gym. For this step, also a few
+Arduino boards would be required for every new gym that wants to be a part of the
+system.
+
+As we have new features to add, we can add new endpoints, because the system was
+designed to be scalable. Also, the time when the window was opened/closed can be
+stored in the database.
+
+The Android application can get the most of the features in the future. Some pie charts or
+diagrams can be implemented so the gym employee or manager could better analyse the
+data or manage the device. Another feature that can be implemented are the notifications,
+so the user could receive a notification when the temperature in the gym reaches a high
+value or the level of CO2 is outside admissible range.
+
+As now the temperature and CO2 level are predefined and cannot be changed, a new
+feature can be added so the users could set another temperature in the gym.
+To extend the number of devices that can be used, an application for iOS devices also can
+be implemented.
+
+## Demo
+
+[Watch the demo on YouTube](https://www.youtube.com/watch?v=ha9fX5N7smU)
