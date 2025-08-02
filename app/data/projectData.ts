@@ -12,17 +12,6 @@ import DbIcon from "@/public/images/icon-db.png";
 import DineEaseBG from "@/public/images/DineEaseBG.png";
 import VRCS from "@/public/images/VRCS.png";
 import SmartGym from "@/public/images/smartGym.png";
-import UImage from "@/public/images/UI-image.png";
-import UImage2 from "@/public/images/UI-image2.png";
-import UImage3 from "@/public/images/UI-image3.png";
-import IImage from "@/public/images/I-Image.png";
-import IImage2 from "@/public/images/I-Image2.png";
-import IImage3 from "@/public/images/IImage3.png";
-import IImage4 from "@/public/images/IImage4.png";
-import IImage5 from "@/public/images/IImage5.png";
-import IImage6 from "@/public/images/IImage6.png";
-import ArchitectureImage from "@/public/images/projectImages/ArchitectureImage.png";
-import BackendArchitecture from "@/public/images/projectImages/BackendArchitecture.png";
 
 export const projectData = () => [
   {
