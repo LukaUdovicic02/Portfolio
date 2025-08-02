@@ -9,7 +9,6 @@ import Link from "next/link";
 import fs from "fs";
 import path from "path";
 import { MDXRemote } from "next-mdx-remote-client/rsc";
-import { serialize } from "next-mdx-remote/serialize";
 import { mdxComponents } from "@/app/components/mdxComponents";
 
 type Params = Promise<{ id: string }>;
@@ -20,16 +19,12 @@ export default async function ProjectPage({ params }: { params: Params }) {
 
   if (!project) return notFound();
 
-
   const filePath = path.join(
     process.cwd(),
     `content/projects/${id}/content.mdx`
   );
 
-
   const content = fs.readFileSync(filePath, "utf-8");
-
-  const sourceMdx = await serialize(content);
 
   return (
     <div className="relative w-full min-h-screen overflow-x-hidden 2xs:p-2 xs:p-4 sm:p-6 md:p-8 lg:p-10">
@@ -111,7 +106,7 @@ export default async function ProjectPage({ params }: { params: Params }) {
       </div>
 
       <div className="max-w-[1350px] text-primarytext mx-auto">
-        <MDXRemote source={content} components={mdxComponents}/>
+        <MDXRemote source={content} components={mdxComponents} />
       </div>
     </div>
   );

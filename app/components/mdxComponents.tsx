@@ -1,8 +1,8 @@
-// components/mdxComponents.tsx
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export const mdxComponents = {
   h1: (props: any) => (
     <h1 className="text-3xl font-bold text-orange-700 mt-10 mb-4 " {...props} />
@@ -58,6 +58,6 @@ export const mdxComponents = {
       );
     }
 
-    return <img {...props} className="mx-auto my-6 rounded-lg shadow-md" />;
+    return <Image {...props} alt={props.alt} className="mx-auto my-6 rounded-lg shadow-md" />;
   },
 };
